@@ -1,0 +1,3 @@
+target "Dimelo CocoaPods Sample" do
+  pod 'Dimelo-iOS', :git => 'git@github.com:dimelo/Dimelo-iOS.git'
+end

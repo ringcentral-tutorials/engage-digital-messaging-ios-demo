@@ -1,0 +1,14 @@
+PODS:
+  - Dimelo-iOS (1.0.0)
+
+DEPENDENCIES:
+  - Dimelo-iOS (from `git@github.com:dimelo/Dimelo-iOS.git`)
+
+EXTERNAL SOURCES:
+  Dimelo-iOS:
+    :git: git@github.com:dimelo/Dimelo-iOS.git
+
+SPEC CHECKSUMS:
+  Dimelo-iOS: e022afd40df758b6870597f972457d4230264a28
+
+COCOAPODS: 0.32.1

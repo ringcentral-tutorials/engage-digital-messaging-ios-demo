@@ -1,0 +1,353 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		207278F019CC29A100C40976 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 207278EF19CC29A100C40976 /* main.m */; };
+		207278F319CC29A100C40976 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 207278F219CC29A100C40976 /* AppDelegate.m */; };
+		207278F619CC29A100C40976 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 207278F519CC29A100C40976 /* ViewController.m */; };
+		207278F919CC29A100C40976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207278F719CC29A100C40976 /* Main.storyboard */; };
+		207278FB19CC29A100C40976 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207278FA19CC29A100C40976 /* Images.xcassets */; };
+		207278FE19CC29A100C40976 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 207278FC19CC29A100C40976 /* LaunchScreen.xib */; };
+		2072792719CC2C5200C40976 /* Dimelo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2072792019CC2C5200C40976 /* Dimelo.bundle */; };
+		2072792819CC2C5200C40976 /* DimeloChatInputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2072792319CC2C5200C40976 /* DimeloChatInputAccessoryView.xib */; };
+		2072792919CC2C5200C40976 /* DimeloChatNotificationContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2072792519CC2C5200C40976 /* DimeloChatNotificationContentView.xib */; };
+		2072792A19CC2C5200C40976 /* libDimelo-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072792619CC2C5200C40976 /* libDimelo-iOS.a */; };
+		2072792C19CC2E5F00C40976 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072792B19CC2E5F00C40976 /* SystemConfiguration.framework */; };
+		2072793919CC2F0500C40976 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072793519CC2EDE00C40976 /* MobileCoreServices.framework */; };
+		2072793B19CC2FC400C40976 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072793A19CC2FC400C40976 /* Accelerate.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		207278EA19CC29A100C40976 /* Dimelo Sample App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dimelo Sample App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		207278EE19CC29A100C40976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		207278EF19CC29A100C40976 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		207278F119CC29A100C40976 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		207278F219CC29A100C40976 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		207278F419CC29A100C40976 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		207278F519CC29A100C40976 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		207278F819CC29A100C40976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		207278FA19CC29A100C40976 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		207278FD19CC29A100C40976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2072792019CC2C5200C40976 /* Dimelo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Dimelo.bundle; sourceTree = "<group>"; };
+		2072792119CC2C5200C40976 /* Dimelo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dimelo.h; sourceTree = "<group>"; };
+		2072792219CC2C5200C40976 /* DimeloChatInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimeloChatInputAccessoryView.h; sourceTree = "<group>"; };
+		2072792319CC2C5200C40976 /* DimeloChatInputAccessoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DimeloChatInputAccessoryView.xib; sourceTree = "<group>"; };
+		2072792419CC2C5200C40976 /* DimeloChatNotificationContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimeloChatNotificationContentView.h; sourceTree = "<group>"; };
+		2072792519CC2C5200C40976 /* DimeloChatNotificationContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DimeloChatNotificationContentView.xib; sourceTree = "<group>"; };
+		2072792619CC2C5200C40976 /* libDimelo-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libDimelo-iOS.a"; sourceTree = "<group>"; };
+		2072792B19CC2E5F00C40976 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2072793519CC2EDE00C40976 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2072793A19CC2FC400C40976 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		207278E719CC29A100C40976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2072793B19CC2FC400C40976 /* Accelerate.framework in Frameworks */,
+				2072793919CC2F0500C40976 /* MobileCoreServices.framework in Frameworks */,
+				2072792C19CC2E5F00C40976 /* SystemConfiguration.framework in Frameworks */,
+				2072792A19CC2C5200C40976 /* libDimelo-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		207278E119CC29A100C40976 = {
+			isa = PBXGroup;
+			children = (
+				207278EC19CC29A100C40976 /* Dimelo Sample App */,
+				207278EB19CC29A100C40976 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		207278EB19CC29A100C40976 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				207278EA19CC29A100C40976 /* Dimelo Sample App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		207278EC19CC29A100C40976 /* Dimelo Sample App */ = {
+			isa = PBXGroup;
+			children = (
+				2072791F19CC2C5200C40976 /* Dimelo */,
+				207278F119CC29A100C40976 /* AppDelegate.h */,
+				207278F219CC29A100C40976 /* AppDelegate.m */,
+				207278F419CC29A100C40976 /* ViewController.h */,
+				207278F519CC29A100C40976 /* ViewController.m */,
+				207278F719CC29A100C40976 /* Main.storyboard */,
+				207278FA19CC29A100C40976 /* Images.xcassets */,
+				207278FC19CC29A100C40976 /* LaunchScreen.xib */,
+				207278ED19CC29A100C40976 /* Supporting Files */,
+			);
+			name = "Dimelo Sample App";
+			path = DimeloSampleApp;
+			sourceTree = "<group>";
+		};
+		207278ED19CC29A100C40976 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2072793A19CC2FC400C40976 /* Accelerate.framework */,
+				2072793519CC2EDE00C40976 /* MobileCoreServices.framework */,
+				2072792B19CC2E5F00C40976 /* SystemConfiguration.framework */,
+				207278EE19CC29A100C40976 /* Info.plist */,
+				207278EF19CC29A100C40976 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2072791F19CC2C5200C40976 /* Dimelo */ = {
+			isa = PBXGroup;
+			children = (
+				2072792019CC2C5200C40976 /* Dimelo.bundle */,
+				2072792119CC2C5200C40976 /* Dimelo.h */,
+				2072792219CC2C5200C40976 /* DimeloChatInputAccessoryView.h */,
+				2072792319CC2C5200C40976 /* DimeloChatInputAccessoryView.xib */,
+				2072792419CC2C5200C40976 /* DimeloChatNotificationContentView.h */,
+				2072792519CC2C5200C40976 /* DimeloChatNotificationContentView.xib */,
+				2072792619CC2C5200C40976 /* libDimelo-iOS.a */,
+			);
+			path = Dimelo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		207278E919CC29A100C40976 /* Dimelo Sample App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2072790D19CC29A100C40976 /* Build configuration list for PBXNativeTarget "Dimelo Sample App" */;
+			buildPhases = (
+				207278E619CC29A100C40976 /* Sources */,
+				207278E719CC29A100C40976 /* Frameworks */,
+				207278E819CC29A100C40976 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dimelo Sample App";
+			productName = "Dimelo Sample App";
+			productReference = 207278EA19CC29A100C40976 /* Dimelo Sample App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		207278E219CC29A100C40976 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Dimelo;
+				TargetAttributes = {
+					207278E919CC29A100C40976 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = 207278E519CC29A100C40976 /* Build configuration list for PBXProject "Dimelo Sample App" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 207278E119CC29A100C40976;
+			productRefGroup = 207278EB19CC29A100C40976 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				207278E919CC29A100C40976 /* Dimelo Sample App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		207278E819CC29A100C40976 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2072792819CC2C5200C40976 /* DimeloChatInputAccessoryView.xib in Resources */,
+				207278F919CC29A100C40976 /* Main.storyboard in Resources */,
+				207278FE19CC29A100C40976 /* LaunchScreen.xib in Resources */,
+				207278FB19CC29A100C40976 /* Images.xcassets in Resources */,
+				2072792719CC2C5200C40976 /* Dimelo.bundle in Resources */,
+				2072792919CC2C5200C40976 /* DimeloChatNotificationContentView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		207278E619CC29A100C40976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207278F619CC29A100C40976 /* ViewController.m in Sources */,
+				207278F319CC29A100C40976 /* AppDelegate.m in Sources */,
+				207278F019CC29A100C40976 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		207278F719CC29A100C40976 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				207278F819CC29A100C40976 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		207278FC19CC29A100C40976 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				207278FD19CC29A100C40976 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2072790B19CC29A100C40976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2072790C19CC29A100C40976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2072790E19CC29A100C40976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DimeloSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DimeloSampleApp/Dimelo",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2072790F19CC29A100C40976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DimeloSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DimeloSampleApp/Dimelo",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		207278E519CC29A100C40976 /* Build configuration list for PBXProject "Dimelo Sample App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2072790B19CC29A100C40976 /* Debug */,
+				2072790C19CC29A100C40976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2072790D19CC29A100C40976 /* Build configuration list for PBXNativeTarget "Dimelo Sample App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2072790E19CC29A100C40976 /* Debug */,
+				2072790F19CC29A100C40976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 207278E219CC29A100C40976 /* Project object */;
+}

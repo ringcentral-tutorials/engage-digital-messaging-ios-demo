@@ -1,0 +1,2 @@
+PODS_DIMELO_COCOAPODS_SAMPLE_DIMELO_IOS_LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/Dimelo-iOS/Dimelo"
+PODS_DIMELO_COCOAPODS_SAMPLE_DIMELO_IOS_OTHER_LDFLAGS = -lDimelo-iOS -framework Accelerate -framework MobileCoreServices -framework SystemConfiguration -framework UIKit

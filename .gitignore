@@ -1,0 +1,16 @@
+.DS_Store
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata
+*.xcodeproj/project.xcworkspace/xcshareddata
+xcuserdata
+xcshareddata
+*.swp
+build/
+Product/
+DoxygenDocs.docset
+DerivedData/
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.moved-aside
+

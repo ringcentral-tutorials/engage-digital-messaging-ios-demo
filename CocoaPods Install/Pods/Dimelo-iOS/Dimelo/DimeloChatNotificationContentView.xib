@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DimeloChatNotificationContentView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Phn-Vd-AhK" userLabel="Background">
+                    <rect key="frame" x="0.0" y="-200" width="320" height="264"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.83999999999999997" colorSpace="calibratedRGB"/>
+                </view>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a sample message to be displayed in this notification view in up to three lines." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="zUm-ot-5PR">
+                    <rect key="frame" x="40" y="7" width="240" height="50"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="Phn-Vd-AhK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-200" id="1cF-lE-3pW"/>
+                <constraint firstItem="zUm-ot-5PR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="2RX-OH-iOb"/>
+                <constraint firstAttribute="trailing" secondItem="zUm-ot-5PR" secondAttribute="trailing" constant="40" id="BPG-fV-6KY"/>
+                <constraint firstAttribute="trailing" secondItem="Phn-Vd-AhK" secondAttribute="trailing" id="Dhw-LF-eLz"/>
+                <constraint firstAttribute="bottom" secondItem="zUm-ot-5PR" secondAttribute="bottom" constant="7" id="KcP-gH-pLA"/>
+                <constraint firstItem="zUm-ot-5PR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="Nti-Bo-fHq"/>
+                <constraint firstAttribute="bottom" secondItem="Phn-Vd-AhK" secondAttribute="bottom" id="UEg-6Y-386"/>
+                <constraint firstItem="Phn-Vd-AhK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VsY-57-ct5"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="label" destination="zUm-ot-5PR" id="Vuv-wh-vrs"/>
+                <outletCollection property="gestureRecognizers" destination="6b8-qB-7tj" appends="YES" id="bpn-er-BfV"/>
+            </connections>
+        </view>
+        <tapGestureRecognizer id="6b8-qB-7tj">
+            <connections>
+                <action selector="tap:" destination="iN0-l3-epB" id="1gn-lZ-GpL"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
