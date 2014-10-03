@@ -15,7 +15,8 @@ extern NSString* const DimeloChatUnreadCountDidChangeNotification;
 extern NSString* const DimeloChatDidSendMessageNotification;
 
 /*!
- * Posted when chat receives new messages from the server (even while the chat is not visible).
+ * Posted when the chat receives new messages from the server 
+ * (even while the chat is not visible).
  */
 extern NSString* const DimeloChatDidReceiveNewMessagesNotification;
 
@@ -74,8 +75,8 @@ extern NSString* const DimeloChatDidDisappearNotification;
 /*!
  * Asks if a notification bar should be displayed.
  *
- * By default, a standard notification slides from the top. When user taps it,
- * chat view is opened (via `dimeloDisplayChatViewController:`).
+ * By default, a standard notification slides from the top. When the user taps it,
+ * the chat view is opened (via `dimeloDisplayChatViewController:`).
  * 
  * @param dimelo   An API instance.
  * @param message  A message to be displayed in the notification.
@@ -247,6 +248,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * // Dimelo will compute and sign a valid JWT token automatically each time you change one of the properties above.
  * // All communications will include the signed JWT token as if they were signed by your server.
  * ```
+ *
  * **WARNING:** Note that anyone who extracts your secret API key will be able 
  * to impersonate any user if they know their userIdentifier. User's data is 
  * relatively safe if userIdentifier is not well-known or cannot be easily guessed.
@@ -259,9 +261,24 @@ extern NSString* const DimeloChatDidDisappearNotification;
 /// @name Setting up an API client
 ////////////////////////////////////////////////////////////////////////////////
 
+/*!
+* Initializes API client with a public API key and a delegate.
+*
+* Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
+*
+* For correct operation you will have to provide a valid signed JWT token via `jwt` property.
+* To do so, fill in `userIdentifier`, `authenticationInfo` and send the resulting `jwtDictionary` to your server.
+*
+* This is a recommended way to access Dimelo API.
+*
+* @param apiKey public hex-encoded API key, typically specific to your app.
+* @param delegate an instance conforming to `DimeloDelegate` protocol.
+*
+*/
+- (id) initWithApiKey:(NSString*)apiKey delegate:(id<DimeloDelegate>)delegate;
 
 /*!
- * Initializes API client with a public API key, hostname and a delegate.
+ * Initializes API client with a public API key, custom hostname and a delegate.
  *
  * Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
  *
@@ -271,21 +288,34 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * This is a recommended way to access Dimelo API.
  *
  * @param apiKey public hex-encoded API key, typically specific to your app.
- * @param hostname a Dimelo API hostname, typically specific to your app.
+ * @param hostname a Dimelo API hostname specific to your app.
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
 - (id) initWithApiKey:(NSString*)apiKey hostname:(NSString*)hostname delegate:(id<DimeloDelegate>)delegate;
 
 /*!
- * Initializes API client with a secret API key, hostname and a delegate.
+ * Initializes API client with a secret API key and a delegate.
+ *
+ * Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
+ *
+ * This mode is less secure than `-initWithApiKey:delegate:` because shared secret is stored inside the app.
+ *
+ * @param apiSecret a hex-encoded API secret key, typically specific to your app.
+ * @param delegate an instance conforming to `DimeloDelegate` protocol.
+ *
+ */
+- (id) initWithApiSecret:(NSString*)apiSecret delegate:(id<DimeloDelegate>)delegate;
+
+/*!
+ * Initializes API client with a secret API key, custom hostname and a delegate.
  *
  * Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
  *
  * This mode is less secure than `-initWithApiKey:hostname:delegate:` because shared secret is stored inside the app.
  *
  * @param apiSecret a hex-encoded API secret key, typically specific to your app.
- * @param hostname a Dimelo API hostname, typically specific to your app.
+ * @param hostname a Dimelo API hostname specific to your app.
  * @param delegate an instance conforming to `DimeloDelegate` protocol.
  *
  */
@@ -319,20 +349,22 @@ extern NSString* const DimeloChatDidDisappearNotification;
 /*!
  * Per-user unique identifier used to link messages sent from different devices to a single person.
  *
- * You can change user identifier only when it was nil. Changing a non-nil identifier throws an exception.
+ * User identifier could be an arbitrary string that makes sense in your application:
+ * an email, an account number or a UUID.
  *
- * Use case: you can initialize and use Dimelo before user is logged-in, but after he is,
- * set the accountIdentifier to let Dimelo know the real identity of the user.
+ * You can initialize and use Dimelo before user is logged-in, but after he has logged in,
+ * set the `userIdentifier` to let Dimelo know the real identity of the user.
+ *
+ * If `userIdentifier` is nil, user will be uniquely identified on the server by the `installationIdentifier`.
  */
 @property(nonatomic, copy) NSString* userIdentifier;
 
 /*!
- * Additional fields to be added to the JWT dictionary.
+ * Additional fields to be added to the JWT dictionary under "extra" key.
  *
- * Make sure only PropertyList-compatible items a present inside this dictionary.
+ * You must make sure only PropertyList-compatible items a present inside this dictionary.
  */
 @property(nonatomic, copy) NSDictionary* authenticationInfo;
-
 
 /*!
  * Optional name of the person to be sent to Dimelo.
@@ -413,6 +445,17 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * set this property to a provided deviceToken.
  */
 @property(nonatomic, copy) NSData* deviceToken;
+
+/*!
+ * Flag to tell Dimelo server to send push notifications using development channel.
+ *
+ * Set this to `YES` in order to receive notifications on development builds.
+ * By default, Dimelo server will send notifications to production environment and
+ * development builds will not receive such notifications.
+ *
+ * Default is `NO`.
+ */
+@property(nonatomic) BOOL developmentAPNS;
 
 /*!
  * Attempts to process the remote notification.

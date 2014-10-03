@@ -3,7 +3,7 @@
 #import <UIKit/UIKit.h>
 
 // This is a private declaration only to assist linking with DimeloChatInputAccessoryView.xib outlets.
-@interface DimeloChatInputAccessoryView : UIView<UITextViewDelegate>
+__attribute__((visibility("default"))) @interface DimeloChatInputAccessoryView : UIView<UITextViewDelegate>
 @property(nonatomic) IBOutlet UIButton *attachmentButton;
 @property(nonatomic) IBOutlet UITextView *textView;
 @property(nonatomic) IBOutlet UIButton *sendButton;
