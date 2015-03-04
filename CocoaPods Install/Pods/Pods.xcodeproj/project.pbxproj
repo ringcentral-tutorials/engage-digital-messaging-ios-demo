@@ -10,14 +10,115 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>00DB3CF2D7114279A456D32F</key>
+		<key>056959AB3F7A16EE39D7AC3B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>6C7FEAA2CF3A46D494858B55</string>
+			<string>FE0791C89EC1B079EFB6F207</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>075EE70E5316453E874D8781</key>
+		<key>0A6E2F7E1F8D7EDDDFAF8212</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>RELEASE=1</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>17F41193EF62669CF6AF4098</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-Dimelo CocoaPods Sample-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>19D4A1CE5E8E72382223CAF5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C77EB67F404860D5F167841B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1BA15A6B07E3A8B2CCA91D0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5B98B7FFBF7DF3E3927B150E</string>
+				<string>FDC7FEA44DF1802CC59D3EF3</string>
+				<string>9AF972BFF638927CD68E675C</string>
+				<string>36CC1C480A01BA30D7E209FD</string>
+				<string>E133DEE70EBFAD0B89620D72</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Dimelo-iOS</string>
+			<key>path</key>
+			<string>Dimelo-iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>222F8FBA82F5D35100AD70DE</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -32,183 +133,76 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>08A93C01F82C4F6A8D61EB0B</key>
+		<key>22793494CD367B143C3E9540</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>4F3B0BC028B84F1899804C2D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>16AC007D58A045069996F852</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5440BB8054EF454FB70B06C9</string>
-				<string>739A27EBF30549CA94D85402</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>5EA822681B4F1C1124DEE212</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
 			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
 			<key>isa</key>
-			<string>XCConfigurationList</string>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>B68643FBB374606ECA5ECB35</string>
+			<key>productRefGroup</key>
+			<string>F30C420FC2D6093885240981</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>62BAAA0D9FA968D5D30A8328</string>
+				<string>F9F3980B619FA20A0E3B35F0</string>
+			</array>
 		</dict>
-		<key>178D05950A4D4AF4B1D28CF9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>43636E2AEDD0441697E3713F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>17D91DFE326B4310A6A4EBFA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>64AD247EB8D7412F84F3BFB1</string>
-			<key>targetProxy</key>
-			<string>F126213F8C0F4BCBBB559B40</string>
-		</dict>
-		<key>187E6CD506934F7F85BAAF87</key>
+		<key>25E4A94A5C6EFC67386E9BC6</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>B3961871892F4EA182BF8A4C</string>
-				<string>F8255D9A45544185B44D0C4F</string>
-				<string>8CD61FC4EF174C8C8F4DF188</string>
-				<string>1B61CF22B29142DABECA76E3</string>
+				<string>CFBA06DDFA59B6C4E5117758</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Support Files</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>1B61CF22B29142DABECA76E3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS-prefix.pch</string>
+			<string>Targets Support Files</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>221FA0B5DC6F461AAD30A8DA</key>
+		<key>2E823C7BEBF61235FCC03AAC</key>
 		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Accelerate.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Accelerate.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>2A2B9595D0A443FEA6D9D9F7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-Dimelo CocoaPods Sample-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>304EEAAE1E70484CA0F14ED8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>DimeloChatNotificationContentView.xib</string>
-			<key>path</key>
-			<string>Dimelo/DimeloChatNotificationContentView.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>307E824EED8344D5B495B255</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>3902676A459E4EFFB33E9FE3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>MobileCoreServices.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>43636E2AEDD0441697E3713F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>44227B64D681497B8DF9DD71</key>
-		<dict>
-			<key>children</key>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
 			<array>
-				<string>93D60E28DE534006A4A217EE</string>
-				<string>E9F71FBF288F4F668D666B24</string>
-				<string>EDED48EC22C1452997358BA7</string>
-				<string>6C7FEAA2CF3A46D494858B55</string>
-				<string>2A2B9595D0A443FEA6D9D9F7</string>
-				<string>F222CFA02AD54C9E8F7C78C6</string>
+				<string>056959AB3F7A16EE39D7AC3B</string>
 			</array>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-Dimelo CocoaPods Sample</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
-		<key>445FD64D956D490699A0BCAA</key>
+		<key>36CC1C480A01BA30D7E209FD</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>EABCE57608BD454F9116E53E</string>
-				<string>075EE70E5316453E874D8781</string>
-				<string>304EEAAE1E70484CA0F14ED8</string>
+				<string>8D2D6CFFD1BFB204C218DFA4</string>
+				<string>222F8FBA82F5D35100AD70DE</string>
+				<string>D161593DB6CE7AE8565C10EC</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -217,222 +211,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>448EC991789E48AD8A9956BE</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-Dimelo CocoaPods Sample.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>4BCDE0941009452FBE1C585A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Dimelo.h</string>
-			<key>path</key>
-			<string>Dimelo/Dimelo.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F3B0BC028B84F1899804C2D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>221FA0B5DC6F461AAD30A8DA</string>
-				<string>43636E2AEDD0441697E3713F</string>
-				<string>3902676A459E4EFFB33E9FE3</string>
-				<string>7C98DF5744AD48CCB38846EF</string>
-				<string>307E824EED8344D5B495B255</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>51E727D1DAC345BBBCE4D30A</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>76E88473AB8E4B4D87C6BB54</string>
-				<string>CAC64B122BD34AD6ABAFD67A</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5440BB8054EF454FB70B06C9</key>
+		<key>42C3EC9A5C5DDDB0F6D26EAA</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>93D60E28DE534006A4A217EE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>582A9CC7E6014EE68C1F0DB5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D25D244FA7C54D60AFF2131F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5CA64A6855B6496FBF39CC07</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-Dimelo CocoaPods Sample-Dimelo-iOS.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>64AD247EB8D7412F84F3BFB1</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7137401935D04CF79437C485</string>
-			<key>buildPhases</key>
-			<array>
-				<string>B5CC5094F73249138E0D89E7</string>
-				<string>FA65F284EDBF4C71A6662ABF</string>
-				<string>A970DEB185974B6E8735B5D3</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS</string>
-			<key>productName</key>
-			<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS</string>
-			<key>productReference</key>
-			<string>5CA64A6855B6496FBF39CC07</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>6C7FEAA2CF3A46D494858B55</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-Dimelo CocoaPods Sample-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>71261F9A29874CF6AB4E8BF8</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>16AC007D58A045069996F852</string>
-			<key>buildPhases</key>
-			<array>
-				<string>9B8AE632565E4D5D964C9F98</string>
-				<string>9E8DF44F934347578E3AA496</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>17D91DFE326B4310A6A4EBFA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-Dimelo CocoaPods Sample</string>
-			<key>productName</key>
-			<string>Pods-Dimelo CocoaPods Sample</string>
-			<key>productReference</key>
-			<string>448EC991789E48AD8A9956BE</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>7137401935D04CF79437C485</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>F16D91FB9CF642EABBBD71B6</string>
-				<string>B02BC39CA3284EEDB8F45F6F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>739A27EBF30549CA94D85402</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>93D60E28DE534006A4A217EE</string>
+			<string>BF3094C9E0599780B7770B66</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -441,12 +223,10 @@
 				<string>YES</string>
 				<key>DSTROOT</key>
 				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-Dimelo CocoaPods Sample-Dimelo-iOS/Pods-Dimelo CocoaPods Sample-Dimelo-iOS-prefix.pch</string>
 				<key>INSTALL_PATH</key>
 				<string>$(BUILT_PRODUCTS_DIR)</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
@@ -462,6 +242,8 @@
 					<string>$(inherited)</string>
 				</array>
 				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
 				<string></string>
 				<key>PRODUCT_NAME</key>
 				<string>$(TARGET_NAME)</string>
@@ -479,14 +261,634 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>75714EA5AE3B4DA5B1EF6E13</key>
+		<key>431C391B06D48F1B43EA5BED</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>5F4472E12B574FF8EDAC9AF0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>51AC902A5FBF9A5D30027C81</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-Dimelo CocoaPods Sample.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>55C7B60F0134249ABA084040</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1BA15A6B07E3A8B2CCA91D0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>56C3373825B27233E859BB9D</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>BF3094C9E0599780B7770B66</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-Dimelo CocoaPods Sample-Dimelo-iOS/Pods-Dimelo CocoaPods Sample-Dimelo-iOS-prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>5B98B7FFBF7DF3E3927B150E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Dimelo.h</string>
+			<key>path</key>
+			<string>Dimelo/Dimelo.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5EA822681B4F1C1124DEE212</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D4D27420B07CF85020A78148</string>
+				<string>0A6E2F7E1F8D7EDDDFAF8212</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>5F4472E12B574FF8EDAC9AF0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>221FA0B5DC6F461AAD30A8DA</string>
+			<string>DFFBC4FACD7790B0859623C1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>76E88473AB8E4B4D87C6BB54</key>
+		<key>625A5095A98D2304707139DA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>741718285557BCC020F10675</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>62BAAA0D9FA968D5D30A8328</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>F2E21435E0D8BC6523E29BF6</string>
+			<key>buildPhases</key>
+			<array>
+				<string>431C391B06D48F1B43EA5BED</string>
+				<string>2E823C7BEBF61235FCC03AAC</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>65350AE5AB7BFE90C077C7F7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-Dimelo CocoaPods Sample</string>
+			<key>productName</key>
+			<string>Pods-Dimelo CocoaPods Sample</string>
+			<key>productReference</key>
+			<string>7F5C1BCB8A55F6EC77415B99</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>65350AE5AB7BFE90C077C7F7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS</string>
+			<key>target</key>
+			<string>F9F3980B619FA20A0E3B35F0</string>
+			<key>targetProxy</key>
+			<string>CE6F210D8B6710F25A04E519</string>
+		</dict>
+		<key>67B3BC71CEDAFFC37829E8A1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-Dimelo CocoaPods Sample.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6879B3DE10BFEBCED3CF4A31</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Accelerate.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Accelerate.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>6C5D2CD126DEDA47160DC4FF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>FC94E060A3B8491E40D4CB03</string>
+				<string>C36F8A63525F5C939A7F0745</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>741718285557BCC020F10675</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D3B5F253B10F6782C3B5268C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>75FC2BD41493FB1F93D954B2</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>56C3373825B27233E859BB9D</string>
+				<string>42C3EC9A5C5DDDB0F6D26EAA</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>78510E573D64703A7E65A026</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B97F2F6942AA531752E48415</string>
+				<string>DFC3907BBF7C23CCDA94D9B0</string>
+				<string>B6C04A6CA75116FB0AC5A088</string>
+				<string>19D4A1CE5E8E72382223CAF5</string>
+				<string>86BDBC506E47045995DF58CA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>794C08CEA91E34C873A22454</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-Dimelo CocoaPods Sample-Dimelo-iOS.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>7A46259D4ED1130E7B44462D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7F5C1BCB8A55F6EC77415B99</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-Dimelo CocoaPods Sample.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>86BDBC506E47045995DF58CA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EA9C6F54878DEE6925C44526</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8D2D6CFFD1BFB204C218DFA4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.plug-in</string>
+			<key>name</key>
+			<string>Dimelo.bundle</string>
+			<key>path</key>
+			<string>Dimelo/Dimelo.bundle</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8F798905E41C043C10B77779</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>94C2B7DDD3B393E5ECB7C696</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9605E630976549CF73BAAE4F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-Dimelo CocoaPods Sample-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9AF972BFF638927CD68E675C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DE36220E959F350266E479B2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B68643FBB374606ECA5ECB35</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8F798905E41C043C10B77779</string>
+				<string>B8FD1174C459B28C1EED87DB</string>
+				<string>55C7B60F0134249ABA084040</string>
+				<string>F30C420FC2D6093885240981</string>
+				<string>25E4A94A5C6EFC67386E9BC6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B6C04A6CA75116FB0AC5A088</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D0F2158549FFB4F00AD2869A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B8FD1174C459B28C1EED87DB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E4FE0ABCF83A21BC1DE5FDDF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B97F2F6942AA531752E48415</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6879B3DE10BFEBCED3CF4A31</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BF3094C9E0599780B7770B66</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C36F8A63525F5C939A7F0745</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FDC7FEA44DF1802CC59D3EF3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C7129E7D697B1B27FB38DA17</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>67B3BC71CEDAFFC37829E8A1</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>C77EB67F404860D5F167841B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>SystemConfiguration.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>CE6F210D8B6710F25A04E519</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>22793494CD367B143C3E9540</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>F9F3980B619FA20A0E3B35F0</string>
+			<key>remoteInfo</key>
+			<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS</string>
+		</dict>
+		<key>CECA284B2F8B2BF6C24F3919</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-Dimelo CocoaPods Sample-environment.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CFBA06DDFA59B6C4E5117758</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>17F41193EF62669CF6AF4098</string>
+				<string>9605E630976549CF73BAAE4F</string>
+				<string>DFFBC4FACD7790B0859623C1</string>
+				<string>CECA284B2F8B2BF6C24F3919</string>
+				<string>FA369EF9BE3E394BB79DE1A2</string>
+				<string>51AC902A5FBF9A5D30027C81</string>
+				<string>67B3BC71CEDAFFC37829E8A1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-Dimelo CocoaPods Sample</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-Dimelo CocoaPods Sample</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D0F2158549FFB4F00AD2869A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>MobileCoreServices.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>D161593DB6CE7AE8565C10EC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>DimeloChatNotificationContentView.xib</string>
+			<key>path</key>
+			<string>Dimelo/DimeloChatNotificationContentView.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D3B5F253B10F6782C3B5268C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D3D29347B561137F422C87B9</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>51AC902A5FBF9A5D30027C81</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D4D27420B07CF85020A78148</key>
 		<dict>
 			<key>buildSettings</key>
 			<dict>
@@ -499,7 +901,7 @@
 				<key>CLANG_ENABLE_MODULES</key>
 				<string>YES</string>
 				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>NO</string>
+				<string>YES</string>
 				<key>CLANG_WARN_BOOL_CONVERSION</key>
 				<string>YES</string>
 				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
@@ -553,347 +955,7 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>794227AE85964AFEA4868C8D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DimeloChatInputAccessoryView.h</string>
-			<key>path</key>
-			<string>Dimelo/DimeloChatInputAccessoryView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7C98DF5744AD48CCB38846EF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>SystemConfiguration.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>8355902DE73940A09379FF13</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5CA64A6855B6496FBF39CC07</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8CD61FC4EF174C8C8F4DF188</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>93B434D36014474F90BC9E90</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>93D60E28DE534006A4A217EE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Dimelo CocoaPods Sample.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9639BC8203C04AE2B1C2D020</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D84A1B487B924EEB80C06003</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9A1C7B15413648298B8BBE39</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>51E727D1DAC345BBBCE4D30A</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>FC9B0B9E28FD4428877BBB59</string>
-			<key>productRefGroup</key>
-			<string>C0DA3748E5AF446986BE03E8</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>71261F9A29874CF6AB4E8BF8</string>
-				<string>64AD247EB8D7412F84F3BFB1</string>
-			</array>
-		</dict>
-		<key>9B8AE632565E4D5D964C9F98</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>00DB3CF2D7114279A456D32F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>9E8DF44F934347578E3AA496</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DAD23EA9AF904B35916907A2</string>
-				<string>8355902DE73940A09379FF13</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A970DEB185974B6E8735B5D3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EE08FEA0B84C467CB9909C80</string>
-				<string>CF4E00E85A454944BA1F72AF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B02BC39CA3284EEDB8F45F6F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F8255D9A45544185B44D0C4F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS-prefix.pch</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B3961871892F4EA182BF8A4C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5CC5094F73249138E0D89E7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B817D27FE08445F08F17A44A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B817D27FE08445F08F17A44A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8CD61FC4EF174C8C8F4DF188</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C0DA3748E5AF446986BE03E8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>448EC991789E48AD8A9956BE</string>
-				<string>5CA64A6855B6496FBF39CC07</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CA0D97256EEF4A0598B01F63</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3902676A459E4EFFB33E9FE3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAC64B122BD34AD6ABAFD67A</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>NO</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CF4E00E85A454944BA1F72AF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>794227AE85964AFEA4868C8D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D25D244FA7C54D60AFF2131F</key>
+		<key>DE36220E959F350266E479B2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -908,165 +970,128 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D26DD4ED3B41427AAC5628F4</key>
+		<key>DFC3907BBF7C23CCDA94D9B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FE0791C89EC1B079EFB6F207</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DFFBC4FACD7790B0859623C1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-Dimelo CocoaPods Sample-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E133DEE70EBFAD0B89620D72</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>44227B64D681497B8DF9DD71</string>
+				<string>94C2B7DDD3B393E5ECB7C696</string>
+				<string>BF3094C9E0599780B7770B66</string>
+				<string>D3B5F253B10F6782C3B5268C</string>
+				<string>7A46259D4ED1130E7B44462D</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Targets Support Files</string>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Pods-Dimelo CocoaPods Sample-Dimelo-iOS</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D84A1B487B924EEB80C06003</key>
+		<key>E4FE0ABCF83A21BC1DE5FDDF</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>4BCDE0941009452FBE1C585A</string>
-				<string>794227AE85964AFEA4868C8D</string>
-				<string>582A9CC7E6014EE68C1F0DB5</string>
-				<string>445FD64D956D490699A0BCAA</string>
-				<string>187E6CD506934F7F85BAAF87</string>
+				<string>6879B3DE10BFEBCED3CF4A31</string>
+				<string>FE0791C89EC1B079EFB6F207</string>
+				<string>D0F2158549FFB4F00AD2869A</string>
+				<string>C77EB67F404860D5F167841B</string>
+				<string>EA9C6F54878DEE6925C44526</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Dimelo-iOS</string>
-			<key>path</key>
-			<string>Dimelo-iOS</string>
+			<string>iOS</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>DAD23EA9AF904B35916907A2</key>
+		<key>EA9C6F54878DEE6925C44526</key>
 		<dict>
-			<key>fileRef</key>
-			<string>43636E2AEDD0441697E3713F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E9F71FBF288F4F668D666B24</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-Dimelo CocoaPods Sample-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EABCE57608BD454F9116E53E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.plug-in</string>
+			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>Dimelo.bundle</string>
+			<string>UIKit.framework</string>
 			<key>path</key>
-			<string>Dimelo/Dimelo.bundle</string>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>F2E21435E0D8BC6523E29BF6</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D3D29347B561137F422C87B9</string>
+				<string>C7129E7D697B1B27FB38DA17</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>F30C420FC2D6093885240981</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7F5C1BCB8A55F6EC77415B99</string>
+				<string>794C08CEA91E34C873A22454</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>EB5A97BA39AE4C28A678630A</key>
+		<key>F9F3980B619FA20A0E3B35F0</key>
 		<dict>
-			<key>fileRef</key>
-			<string>7C98DF5744AD48CCB38846EF</string>
+			<key>buildConfigurationList</key>
+			<string>75FC2BD41493FB1F93D954B2</string>
+			<key>buildPhases</key>
+			<array>
+				<string>625A5095A98D2304707139DA</string>
+				<string>78510E573D64703A7E65A026</string>
+				<string>6C5D2CD126DEDA47160DC4FF</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EDED48EC22C1452997358BA7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-Dimelo CocoaPods Sample-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EE08FEA0B84C467CB9909C80</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4BCDE0941009452FBE1C585A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F126213F8C0F4BCBBB559B40</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>9A1C7B15413648298B8BBE39</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>64AD247EB8D7412F84F3BFB1</string>
-			<key>remoteInfo</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
 			<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS</string>
+			<key>productName</key>
+			<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS</string>
+			<key>productReference</key>
+			<string>794C08CEA91E34C873A22454</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
 		</dict>
-		<key>F16D91FB9CF642EABBBD71B6</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F8255D9A45544185B44D0C4F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>F222CFA02AD54C9E8F7C78C6</key>
+		<key>FA369EF9BE3E394BB79DE1A2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1079,60 +1104,43 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F8255D9A45544185B44D0C4F</key>
+		<key>FC94E060A3B8491E40D4CB03</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5B98B7FFBF7DF3E3927B150E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FDC7FEA44DF1802CC59D3EF3</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DimeloChatInputAccessoryView.h</string>
 			<key>path</key>
-			<string>Pods-Dimelo CocoaPods Sample-Dimelo-iOS-Private.xcconfig</string>
+			<string>Dimelo/DimeloChatInputAccessoryView.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>FA65F284EDBF4C71A6662ABF</key>
+		<key>FE0791C89EC1B079EFB6F207</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>75714EA5AE3B4DA5B1EF6E13</string>
-				<string>178D05950A4D4AF4B1D28CF9</string>
-				<string>CA0D97256EEF4A0598B01F63</string>
-				<string>EB5A97BA39AE4C28A678630A</string>
-				<string>FEE283EAA5204A3AA15D3971</string>
-			</array>
 			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>FC9B0B9E28FD4428877BBB59</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>93B434D36014474F90BC9E90</string>
-				<string>08A93C01F82C4F6A8D61EB0B</string>
-				<string>9639BC8203C04AE2B1C2D020</string>
-				<string>C0DA3748E5AF446986BE03E8</string>
-				<string>D26DD4ED3B41427AAC5628F4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEE283EAA5204A3AA15D3971</key>
-		<dict>
-			<key>fileRef</key>
-			<string>307E824EED8344D5B495B255</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>DEVELOPER_DIR</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
-	<string>9A1C7B15413648298B8BBE39</string>
+	<string>22793494CD367B143C3E9540</string>
 </dict>
 </plist>

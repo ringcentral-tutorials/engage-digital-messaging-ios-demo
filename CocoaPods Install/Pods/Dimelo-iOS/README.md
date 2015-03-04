@@ -1,7 +1,7 @@
 Dimelo-iOS
 ==========
 
-Dimelo provides a mobile chat component that allows users of your app
+Dimelo provides a mobile messaging component that allows users of your app
 to easily communicate  with your customer support agents. You can send text messages
 and images, and receive push notifications and automatic server-provided replies.
 
@@ -12,46 +12,44 @@ rich customization options to fit perfectly in your application.
 Getting Started
 ---------------
 
-Follow these steps to integrate the Dimelo chat in your application.
+Follow these steps to integrate the Dimelo Mobile Messaging in your application.
 
 1) Install the Dimelo library either via CocoaPods or manually (see below).
 
-2) Configure a `Dimelo` instance with your API key, optional user identifier and
-   other user-specific info. We recommend to keep this instance in an instance
-   variable in your app delegate.
+2) Configure the shared the `Dimelo` shared instance `+[Dimelo sharedInstance]`
+ with your API secret (`-setApiSecret:secret:`), optional user identifier and other user-specific info. (See **Authentication** following section)
 
-3) Set `dimelo.developmentAPNS` = `YES` in your development builds to receive
-   push notifications. Set it back to `NO` before submitting to AppStore.
+You can also create a `DimeloConfig.plist` file and add it to your project.
+The library will use it to configure the `Dimelo` shared instance.
+[See more informations about how to use plist to configure Dimelo](PlistCustomization.md)
 
-4) Specify a delegate for `Dimelo` instance (usually it is your app delegate) and
-   implement `-dimeloDisplayChatViewController:` method. This method will be called by
-   `Dimelo` when it needs to present a chat view. Your application determines
-   how and where to display a chat view controller.
+3) Set `dimelo.developmentAPNS` = `YES` in your development builds (the milage may vary depending on your build strategy (TestFlight, Fabric.io ...) to receive push notifications. Set it back to `NO` before submitting to AppStore.
+
+To benefit from APNs on Mobile Messaging you will need to have properly configured and generated Apple APN cerficates and have them configured in your SMCC admin configuration interface.
+
+4) Specify a delegate for the `Dimelo` shared instance `+[Dimelo sharedInstance]` with `dimelo.delegate` (usually it is your app delegate)
+
+Implement `-dimeloDisplayChatViewController:` method. This method will be called by `Dimelo` when it needs to present a chat view. Your application determines how and where to display a chat view controller.
 
 To display a chat, get its view controller using `-[Dimelo chatViewController]`
 and present it either modally, in popover or in a UITabBarController.
-See **Displaying Chat** section below for more options.
+See **Displaying the Mobile Messaging** section below for more options.
 
-5) In your app delegate, in  `-application:didRegisterForRemoteNotificationsWithDeviceToken:`
-   set `deviceToken` property on your `Dimelo` instance. This will allow your app
-   to receive push notifications from the Dimelo server when your agent replies to a user.
+5) In your app delegate, in  `-application:didRegisterForRemoteNotificationsWithDeviceToken:` set `deviceToken` property on your `Dimelo` instance. This will allow your app to receive push notifications from the Dimelo server when your agent replies to a user.
 
-6) Also in the app delegate, in `-application:didReceiveRemoteNotification:`
-   pass the `userInfo` to `-[Dimelo consumeReceivedRemoteNotification:]`.
+See **Push Notifications** for more detail.
 
-These are minimal steps to make chat work in your app. Read on to learn how
-to customize the appearance and behaviour of the chat to fit perfectly in your app.
+6) Also in the app delegate, in `-application:didReceiveRemoteNotification:` pass the `userInfo` to `-[Dimelo consumeReceivedRemoteNotification:]`.
+
+These are minimal steps to make chat work in your app. Read on to learn how to customize the appearance and behaviour of the chat to fit perfectly in your app.
 
 See also **Sample Code** section in the end of this README or
 download the [Sample App](https://github.com/dimelo/Dimelo-iOS-SampleApp).
 
-Displaying the Chat
+Displaying the Mobile Messaging
 -------------------
 
-Dimelo provides an opaque `UIViewController` instance that you can display how you want
-(created by `-[Dimelo chatViewController]`). You may put it as a tab in a `UITabBarController`,
-show in a popover or present modally. You can also use `transitioningDelegate`
-to present chat view controller in a very custom way.
+Dimelo provides an opaque `UIViewController` instance that you can display how you want (created by `-[Dimelo chatViewController]`). You may put it as a tab in a `UITabBarController`, show in a popover or present modally. You can also use `transitioningDelegate` to present chat view controller in a very custom way.
 
 You can present chat manually (e.g. user taps a button to open "support"),
 or the chat may appear automatically (mediated by the delegate method `-dimeloDisplayChatViewController:`).
@@ -63,18 +61,17 @@ The chat is displayed automatically in two cases:
 2. When the user taps in-app notification bar that slides from the top in case
    a new message arrives while chat is not visible.
 
-To display the chat manually and reuse the code in `-dimeloDisplayChatViewController:`,
-call `-[Dimelo displayChatView]`. When necessary, you can request another instance of
-a chat view controller (`-[Dimelo chatViewController]`) to show the chat in some other context.
+To display the chat manually and reuse the code in `-dimeloDisplayChatViewController:`, call `-[Dimelo displayChatView]`. When necessary, you can request another instance of a chat view controller (`-[Dimelo chatViewController]`) to show the chat in some other context.
 
 Authentication
 --------------
 
 With each HTTP request, Dimelo sends a JWT ([JSON Web Token](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html)).
-This token contains user-specific info that you specify (`userIdentifier`, `userName` etc.)
-and a HMAC signature. User identifier allows Dimelo to separate messages from
-different users in the agent's backend. If user identifier is missing (`nil`),
-then unique installation identifier is used to identify the user (created automatically).
+This token contains user-specific info that you specify (`userIdentifier`, `userName` etc.) and a HMAC signature. User identifier allows Dimelo to identify author of messages from different in the agent's backend. If user identifier is missing (`nil`), then an autogenerated unique installation identifier is used to identify the user (created automatically).
+
+If your app rely on a uniq imutable technical identifier to identify user use `userIdentifier` to also identify them at the Agent interface level.
+
+Use `userName` to provide to agent a human name for the user.
 
 We support two kinds of authentication modes: with server-side secret and a built-in secret.
 
@@ -82,8 +79,7 @@ We support two kinds of authentication modes: with server-side secret and a buil
 
 This is a convenient mode for testing and secure enough when user identifiers are unpredictable.
 
-You configure `Dimelo` instance with the *secret* key (`-initWithApiSecret:hostname:delegate:`)
-and it creates and signs JWT automatically when needed (as if it was provided by the server).
+You configure `Dimelo` instance (`-[Dimelo sharedInstance]`) with the *secret* key (`-[dimelo setApiSecret:secret:]`) and it creates and signs JWT automatically when needed (as if it was provided by the server).
 You simply set necessary user-identifying information and JWT will be computed on the fly.
 You do not need any cooperation with your server in this setup.
 
@@ -92,7 +88,7 @@ Anyone could then sign JWTs with arbitrary user identifying info to access other
 chats and impersonate them. To mitigate that risk make sure to use this mode
 only during development, or ensure that user identifiers are not predictable (e.g. random UUIDs).
 
-#### 2. Setup with a server-side secret
+#### 2. Setup with a server-side secret (better security but more complicated)
 
 This is a more secure mode. Dimelo will provide you with two keys: a public API key and a secret key.
 The public one will be used to configure `Dimelo` instance and identify your app.
@@ -164,9 +160,18 @@ If your application has its own unread count, you might want to disable this beh
 `updateAppBadgeNumber` property to `NO`. Then you can access the Dimelo-only unread count using `unreadCount` property.
 
 
+Location Support
+----------------
 
-Customizing Chat Appearance
+To enable user location sharing in `Dimelo` chat, please make sure to 
+define the `NSLocationWhenInUseUsageDescription` key inside your project info.plist
+
+
+
+Customizing Mobile Messaging Appearance
 ---------------------------
+
+[see how to customize Dimelo using plist](PlistCustomization.md)
 
 We provide a lot of properties for you to make the chat look native to your application.
 
@@ -201,7 +206,7 @@ Insets do not apply to attachment bubbles.
 Check the **API Reference** to learn about all customization options.
 
 
-Reacting To Chat Events
+Reacting To Mobile Messaging Events
 -----------------------
 
 We provide two ways to react to various events in the char:
@@ -328,6 +333,10 @@ A license file.
 
 You are reading this.
 
+##### ./CHANGELOG
+
+Changelog and versionning of the Dimelo iOS SDK
+
 ##### ./Reference
 
 An appledoc-style API reference generated from `Dimelo.h`.
@@ -339,31 +348,53 @@ Sample Code
 The following code is a minimal configuration of Dimelo chat. It presents
 the chat, handles push notifications and displays network activity in status bar.
 
+DimeloConfig.plist
+ 
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>title</key>
+    <string>Support Mobile Messaging</string>
+</dict>
+</plist>
+```
+
+
+
+AppDelegate.m
 
 ```
 #import "AppDelegate.h"
 #import "Dimelo.h"
 
 @interface AppDelegate () <DimeloDelegate>
-@property(nonatomic) Dimelo* dimelo;
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSString* secret = @"<ENTER YOUR API SECRET HERE>";
+    Dimelo* dimelo = [Dimelo sharedInstance];   
+    dimelo.delegate = self;
 
-    self.dimelo = [[Dimelo alloc] initWithApiSecret:secret delegate:self];
+    //Authentify using build-in authentification
+    NSString* secret = @"YOUR SECRET API KEY";
+    [dimelo setApiSecret:secret];
 
-    // When any of these properties are set, JWT is recomputed instantly.
-    self.dimelo.userIdentifier = @"U-1000555777";
-    self.dimelo.authenticationInfo = @{@"bankBranch": @"Test-1234" };
-    self.dimelo.title = NSLocalizedString(@"Support Chat", @"Sample App");
+    // Authentify the user if you have an internal user_id otherwise this
+    // is random
+    dimelo.userIdentifier = @"application-user-id";
+    dimelo.userName = @"John Doe";
+
+    // Indicated in which environment your app is build
+    // to receive APNs
+    dimelo.developmentAPNS = NO;
 
     dispatch_async(dispatch_get_main_queue(), ^{
 
-        [self.dimelo displayChatView];
+        [[Dimelo sharedInstance] displayChatView];
 
     });
 
@@ -373,12 +404,12 @@ the chat, handles push notifications and displays network activity in status bar
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     // Register the device token.
-    self.dimelo.deviceToken = deviceToken;
+    [Dimelo sharedInstance].deviceToken = deviceToken;
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    if ([self.dimelo consumeReceivedRemoteNotification:userInfo])
+    if ([[Dimelo sharedInstance] consumeReceivedRemoteNotification:userInfo])
     {
         // Notification is consumed by Dimelo, do not do anything else with it.
         return;
@@ -418,6 +449,7 @@ the chat, handles push notifications and displays network activity in status bar
 
 
 @end
+
 ```
 
 
