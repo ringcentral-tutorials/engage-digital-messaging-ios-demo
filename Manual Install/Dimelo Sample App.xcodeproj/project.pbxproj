@@ -16,10 +16,14 @@
 		2072792719CC2C5200C40976 /* Dimelo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2072792019CC2C5200C40976 /* Dimelo.bundle */; };
 		2072792819CC2C5200C40976 /* DimeloChatInputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2072792319CC2C5200C40976 /* DimeloChatInputAccessoryView.xib */; };
 		2072792919CC2C5200C40976 /* DimeloChatNotificationContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2072792519CC2C5200C40976 /* DimeloChatNotificationContentView.xib */; };
-		2072792A19CC2C5200C40976 /* libDimelo-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072792619CC2C5200C40976 /* libDimelo-iOS.a */; };
 		2072792C19CC2E5F00C40976 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072792B19CC2E5F00C40976 /* SystemConfiguration.framework */; };
 		2072793919CC2F0500C40976 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072793519CC2EDE00C40976 /* MobileCoreServices.framework */; };
 		2072793B19CC2FC400C40976 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072793A19CC2FC400C40976 /* Accelerate.framework */; };
+		A10B2E7B1AA7991C00872EC2 /* DimeloConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = A10B2E7A1AA7991C00872EC2 /* DimeloConfig.plist */; };
+		A10B2E7C1AA79C0F00872EC2 /* libDimelo-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072792619CC2C5200C40976 /* libDimelo-iOS.a */; };
+		A10B2E7E1AA79C4000872EC2 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10B2E7D1AA79C4000872EC2 /* AddressBookUI.framework */; };
+		A10B2E801AA79C7A00872EC2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10B2E7F1AA79C7A00872EC2 /* MapKit.framework */; };
+		A10B2E821AA79CAF00872EC2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10B2E811AA79CAF00872EC2 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		2072792B19CC2E5F00C40976 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2072793519CC2EDE00C40976 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2072793A19CC2FC400C40976 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		A10B2E7A1AA7991C00872EC2 /* DimeloConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DimeloConfig.plist; sourceTree = "<group>"; };
+		A10B2E7D1AA79C4000872EC2 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		A10B2E7F1AA79C7A00872EC2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A10B2E811AA79CAF00872EC2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,10 +58,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10B2E821AA79CAF00872EC2 /* CoreLocation.framework in Frameworks */,
+				A10B2E801AA79C7A00872EC2 /* MapKit.framework in Frameworks */,
+				A10B2E7E1AA79C4000872EC2 /* AddressBookUI.framework in Frameworks */,
+				A10B2E7C1AA79C0F00872EC2 /* libDimelo-iOS.a in Frameworks */,
 				2072793B19CC2FC400C40976 /* Accelerate.framework in Frameworks */,
 				2072793919CC2F0500C40976 /* MobileCoreServices.framework in Frameworks */,
 				2072792C19CC2E5F00C40976 /* SystemConfiguration.framework in Frameworks */,
-				2072792A19CC2C5200C40976 /* libDimelo-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +74,9 @@
 		207278E119CC29A100C40976 = {
 			isa = PBXGroup;
 			children = (
+				A10B2E811AA79CAF00872EC2 /* CoreLocation.framework */,
+				A10B2E7F1AA79C7A00872EC2 /* MapKit.framework */,
+				A10B2E7D1AA79C4000872EC2 /* AddressBookUI.framework */,
 				207278EC19CC29A100C40976 /* Dimelo Sample App */,
 				207278EB19CC29A100C40976 /* Products */,
 			);
@@ -87,6 +101,7 @@
 				207278F719CC29A100C40976 /* Main.storyboard */,
 				207278FA19CC29A100C40976 /* Images.xcassets */,
 				207278FC19CC29A100C40976 /* LaunchScreen.xib */,
+				A10B2E7A1AA7991C00872EC2 /* DimeloConfig.plist */,
 				207278ED19CC29A100C40976 /* Supporting Files */,
 			);
 			name = "Dimelo Sample App";
@@ -182,6 +197,7 @@
 				207278FB19CC29A100C40976 /* Images.xcassets in Resources */,
 				2072792719CC2C5200C40976 /* Dimelo.bundle in Resources */,
 				2072792919CC2C5200C40976 /* DimeloChatNotificationContentView.xib in Resources */,
+				A10B2E7B1AA7991C00872EC2 /* DimeloConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

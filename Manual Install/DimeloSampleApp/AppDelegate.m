@@ -2,39 +2,40 @@
 #import "Dimelo.h"
 
 @interface AppDelegate () <DimeloDelegate>
-@property(nonatomic) Dimelo* dimelo;
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    srand48(dispatch_time(DISPATCH_TIME_NOW, 0));
-
+    Dimelo* dimelo = [Dimelo sharedInstance];
+    dimelo.delegate = self;
+    
+    //Authentify using build-in authentification
     NSString* secret = @"<ENTER YOUR API SECRET HERE>";
+    [dimelo setApiSecret:secret];
 
-    self.dimelo = [[Dimelo alloc] initWithApiSecret:secret delegate:self];
+    // Authentify the user if you have an internal user_id otherwise this
+    // is random
+    dimelo.userIdentifier = @"application-user-id";
+    dimelo.userName = @"John Doe";
 
-    // When any of these properties are set, JWT is recomputed instantly.
-    self.dimelo.userIdentifier = @"U-1000555777";
-    self.dimelo.authenticationInfo = @{@"bankBranch": @"Test-1234" };
-
-    self.dimelo.title = NSLocalizedString(@"Support Chat", @"Sample App");
-
-    NSLog(@"JWT: %@", self.dimelo.jwt);
-
+    // Indicated in which environment your app is build
+    // to receive APNs
+    dimelo.developmentAPNS = NO;
+    
     return YES;
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     // Register the device token.
-    self.dimelo.deviceToken = deviceToken;
+    [Dimelo sharedInstance].deviceToken = deviceToken;
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    if ([self.dimelo consumeReceivedRemoteNotification:userInfo])
+    if ([[Dimelo sharedInstance] consumeReceivedRemoteNotification:userInfo])
     {
         // Notification is consumed by Dimelo, do not do anything else with it.
         return;
@@ -46,23 +47,29 @@
 
 - (IBAction) openChat:(id)sender
 {
+    Dimelo* dimelo = [Dimelo sharedInstance];
+    
+    //Aspect is configured by DimeloConfig.plist but it could be configured programmatically
+    
+    //dimelo.title = NSLocalizedString(@"Support Chat", @"Sample App");
+    
     // Choose a random color to customize appearance of the chat.
-    double hue = drand48();
-    double hue2 = (((int)(hue*360) + (int)(240*drand48()))%360)/360.0;
-    UIColor* color = [UIColor colorWithHue:hue saturation:0.6 brightness:0.8 alpha:1.0];
-
+    //double hue = drand48();
+    //double hue2 = (((int)(hue*360) + (int)(240*drand48()))%360)/360.0;
+    //UIColor* color = [UIColor colorWithHue:hue saturation:0.6 brightness:0.8 alpha:1.0];
+    
     // For more information about available customization options, consult Dimelo.h
     // or documentation in Dimelo-iOS/Reference/html/index.html.
-    self.dimelo.backgroundView.backgroundColor = [UIColor colorWithHue:hue2 saturation:0.01 brightness:1.0 alpha:1.0];
-    self.dimelo.tintColor = color;
-    self.dimelo.dateTextColor = color;
-    self.dimelo.loadMoreMessagesButtonTextColor = color;
-    self.dimelo.userMessageBackgroundColor = color;
-    self.dimelo.agentMessageBackgroundColor = [UIColor colorWithHue:hue2 saturation:0.05 brightness:0.93 alpha:1.0];
+    //dimelo.backgroundView.backgroundColor = [UIColor colorWithHue:hue2 saturation:0.01 brightness:1.0 alpha:1.0];
+    //dimelo.tintColor = color;
+    //dimelo.dateTextColor = color;
+    //dimelo.loadMoreMessagesButtonTextColor = color;
+    //dimelo.userMessageBackgroundColor = color;
+    //dimelo.agentMessageBackgroundColor = [UIColor colorWithHue:hue2 saturation:0.05 brightness:0.93 alpha:1.0];
 
     // Use standard entry point to open the chat in the same way,
     // it is opened from push notification.
-    [self.dimelo displayChatView];
+    [dimelo displayChatView];
 }
 
 - (void) closeChat:(id)_
