@@ -9,10 +9,12 @@ The component integrates nicely in any iPhone or iPad app, allows presenting
 the chat in tab, modal, popover or even customly designed containers and has
 rich customization options to fit perfectly in your application.
 
+Please refer to [Technical Website](http://mobile-messaging.dimelo.com) for other technical references.
+
 Getting Started
 ---------------
 
-Follow these steps to integrate the Dimelo Mobile Messaging in your application.
+Follow these steps to integrate the Dimelo Mobile SDK in your application.
 
 1) Install the Dimelo library either via CocoaPods or manually (see below).
 
@@ -25,7 +27,7 @@ The library will use it to configure the `Dimelo` shared instance.
 
 3) Set `dimelo.developmentAPNS` = `YES` in your development builds (the milage may vary depending on your build strategy (TestFlight, Fabric.io ...) to receive push notifications. Set it back to `NO` before submitting to AppStore.
 
-To benefit from APNs on Mobile Messaging you will need to have properly configured and generated Apple APN cerficates and have them configured in your SMCC admin configuration interface.
+To benefit from APNs on Dimelo Mobile SDK integration you will need to have properly configured and generated Apple APN cerficates and have them configured in your SMCC admin configuration interface.
 
 4) Specify a delegate for the `Dimelo` shared instance `+[Dimelo sharedInstance]` with `dimelo.delegate` (usually it is your app delegate)
 
@@ -33,7 +35,7 @@ Implement `-dimeloDisplayChatViewController:` method. This method will be called
 
 To display a chat, get its view controller using `-[Dimelo chatViewController]`
 and present it either modally, in popover or in a UITabBarController.
-See **Displaying the Mobile Messaging** section below for more options.
+See **Displaying Dimelo Mobile conversation screen** section below for more options.
 
 5) In your app delegate, in  `-application:didRegisterForRemoteNotificationsWithDeviceToken:` set `deviceToken` property on your `Dimelo` instance. This will allow your app to receive push notifications from the Dimelo server when your agent replies to a user.
 
@@ -46,7 +48,7 @@ These are minimal steps to make chat work in your app. Read on to learn how to c
 See also **Sample Code** section in the end of this README or
 download the [Sample App](https://github.com/dimelo/Dimelo-iOS-SampleApp).
 
-Displaying the Mobile Messaging
+Displaying Dimelo Mobile conversation screen
 -------------------
 
 Dimelo provides an opaque `UIViewController` instance that you can display how you want (created by `-[Dimelo chatViewController]`). You may put it as a tab in a `UITabBarController`, show in a popover or present modally. You can also use `transitioningDelegate` to present chat view controller in a very custom way.
@@ -160,15 +162,20 @@ If your application has its own unread count, you might want to disable this beh
 `updateAppBadgeNumber` property to `NO`. Then you can access the Dimelo-only unread count using `unreadCount` property.
 
 
-Location Support
-----------------
+Required Permissions
+--------------------
 
-To enable user location sharing in `Dimelo` chat, please make sure to 
-define the `NSLocationWhenInUseUsageDescription` key inside your project info.plist
+To access all the features of the Dimelo SDK, some permissions have to be defined inside your project info.plist:
 
+|XCode Key|Raw Info.plist Key|Used for|
+|---------|------------------|--------|
+|Privacy - Photo Library Usage Description|NSPhotoLibraryUsageDescription|Used to allow the user to choose images from its photo album to send them as attachment|
+|Privacy - Camera Usage Description|NSCameraUsageDescription|Used to allow the user to take pictures from its camera to send them as attachment|
+|Privacy - Location When In Use Usage Description|NSLocationWhenInUseUsageDescription|User to allow the user to send a location as attachment|
 
+If these permissions are not provided, the corresponding options will be hidden from the user.
 
-Customizing Mobile Messaging Appearance
+Customizing Dimelo Mobile SDK Appearance
 ---------------------------
 
 [see how to customize Dimelo using plist](PlistCustomization.md)
@@ -203,10 +210,10 @@ If you provide a custom bubble image for text, you should also update
 Attachment bubbles only use alpha channel of the image to mask the image preview.
 Insets do not apply to attachment bubbles.
 
-Check the **API Reference** to learn about all customization options.
+Check the [API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) to learn about all customization options.
 
 
-Reacting To Mobile Messaging Events
+Reacting To Dimelo Mobile SDK Events
 -----------------------
 
 We provide two ways to react to various events in the char:
@@ -223,7 +230,7 @@ and `-dimeloDidEndNetworkActivity:`. Dimelo does not change the status bar netwo
 indicator to avoid conflicts with your app. If you would like to indicate it, you should
 override these methods and update the activity indicator accordingly.
 
-Please refer to **API Reference** documentation (in ./Reference folder) for more information.
+Please refer to [API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) documentation for more information.
 
 
 
@@ -240,7 +247,7 @@ How To Install With CocoaPods
 
 4) Include header in your app delegate: `#include "Dimelo.h"`
 
-5) Follow the [API reference](Reference/html/index.html) to configure and use Dimelo instance.
+5) Follow the [API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) to configure and use Dimelo instance.
 
 
 
@@ -272,19 +279,22 @@ You will see Dimelo files in your project tree:
  * Accelerate.framework
  * MobileCoreServices.framework
  * SystemConfiguration.framework
+ * CoreLocation.framework
+ * MapKit.framework
+ * AddressBookUI.framework
 
 <img src=HowToImages/06-add-frameworks@2x.png width=400></img>
 
 6) Include header in your app delegate: `#include "Dimelo.h"`
 
-7) Follow the [API reference](Reference/html/index.html) to configure and use Dimelo instance.
+7) Follow the [API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html) to configure and use Dimelo instance.
 
 
 
 API Reference
 -------------
 
-You will find API documentation in `./Reference` folder. Alternatively, you may consult `Dimelo/Dimelo.h` file.
+[Dimelo Mobile iOS SDK API reference](http://rawgit.com/dimelo/Dimelo-iOS/master/Reference/html/index.html).  Alternatively, you may consult `Dimelo/Dimelo.h` file.
 
 
 Files and folders
@@ -356,7 +366,7 @@ DimeloConfig.plist
 <plist version="1.0">
 <dict>
     <key>title</key>
-    <string>Support Mobile Messaging</string>
+    <string>Dimelo Mobile Support</string>
 </dict>
 </plist>
 ```

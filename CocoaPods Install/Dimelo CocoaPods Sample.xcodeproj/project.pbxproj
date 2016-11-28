@@ -17,8 +17,8 @@
 		2072793919CC2F0500C40976 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072793519CC2EDE00C40976 /* MobileCoreServices.framework */; };
 		2072793B19CC2FC400C40976 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072793A19CC2FC400C40976 /* Accelerate.framework */; };
 		20E4674D19D00ED4009EC7AF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 20E4674C19D00ED4009EC7AF /* Podfile */; };
-		380CB3C01E934B0E960607A6 /* libPods-Dimelo CocoaPods Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D8162210CF402887E9EA94 /* libPods-Dimelo CocoaPods Sample.a */; };
 		A10B2E791AA7954600872EC2 /* DimeloConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = A10B2E781AA7954600872EC2 /* DimeloConfig.plist */; };
+		D98DACC392448F7AB4D7C238 /* libPods-Dimelo CocoaPods Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF51AD55571B0123DE776C4 /* libPods-Dimelo CocoaPods Sample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +36,10 @@
 		2072793519CC2EDE00C40976 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2072793A19CC2FC400C40976 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		20E4674C19D00ED4009EC7AF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		37F38ED5D2413B931A4C104A /* Pods-Dimelo CocoaPods Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dimelo CocoaPods Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dimelo CocoaPods Sample/Pods-Dimelo CocoaPods Sample.release.xcconfig"; sourceTree = "<group>"; };
-		72D0D70B314A08F8F8579715 /* Pods-Dimelo CocoaPods Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dimelo CocoaPods Sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dimelo CocoaPods Sample/Pods-Dimelo CocoaPods Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		8EF51AD55571B0123DE776C4 /* libPods-Dimelo CocoaPods Sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dimelo CocoaPods Sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		941CA9CB05036DD2117E48F0 /* Pods-Dimelo CocoaPods Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dimelo CocoaPods Sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dimelo CocoaPods Sample/Pods-Dimelo CocoaPods Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		A10B2E781AA7954600872EC2 /* DimeloConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DimeloConfig.plist; sourceTree = SOURCE_ROOT; };
-		D5D8162210CF402887E9EA94 /* libPods-Dimelo CocoaPods Sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dimelo CocoaPods Sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92AE51EF0CA8E879685B446 /* Pods-Dimelo CocoaPods Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dimelo CocoaPods Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dimelo CocoaPods Sample/Pods-Dimelo CocoaPods Sample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,21 +50,30 @@
 				2072793B19CC2FC400C40976 /* Accelerate.framework in Frameworks */,
 				2072793919CC2F0500C40976 /* MobileCoreServices.framework in Frameworks */,
 				2072792C19CC2E5F00C40976 /* SystemConfiguration.framework in Frameworks */,
-				380CB3C01E934B0E960607A6 /* libPods-Dimelo CocoaPods Sample.a in Frameworks */,
+				D98DACC392448F7AB4D7C238 /* libPods-Dimelo CocoaPods Sample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		086AB6B65C1BC3056AD04D54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				941CA9CB05036DD2117E48F0 /* Pods-Dimelo CocoaPods Sample.debug.xcconfig */,
+				D92AE51EF0CA8E879685B446 /* Pods-Dimelo CocoaPods Sample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		207278E119CC29A100C40976 = {
 			isa = PBXGroup;
 			children = (
 				20E4674C19D00ED4009EC7AF /* Podfile */,
 				207278EC19CC29A100C40976 /* Dimelo Sample App */,
 				207278EB19CC29A100C40976 /* Products */,
-				82613871F4514407B3E2D268 /* Frameworks */,
-				71AF1585A063F25A4856E2EB /* Pods */,
+				086AB6B65C1BC3056AD04D54 /* Pods */,
+				C807B7EB14207C7156BF7080 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,19 +114,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		71AF1585A063F25A4856E2EB /* Pods */ = {
+		C807B7EB14207C7156BF7080 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				72D0D70B314A08F8F8579715 /* Pods-Dimelo CocoaPods Sample.debug.xcconfig */,
-				37F38ED5D2413B931A4C104A /* Pods-Dimelo CocoaPods Sample.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		82613871F4514407B3E2D268 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D5D8162210CF402887E9EA94 /* libPods-Dimelo CocoaPods Sample.a */,
+				8EF51AD55571B0123DE776C4 /* libPods-Dimelo CocoaPods Sample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,11 +129,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2072790D19CC29A100C40976 /* Build configuration list for PBXNativeTarget "Dimelo CocoaPods Sample" */;
 			buildPhases = (
-				3416F3BAA2AA4A7AAC06AE44 /* Check Pods Manifest.lock */,
+				E7816F129B8DA08114ADCE87 /* [CP] Check Pods Manifest.lock */,
 				207278E619CC29A100C40976 /* Sources */,
 				207278E719CC29A100C40976 /* Frameworks */,
 				207278E819CC29A100C40976 /* Resources */,
-				14BF3AA7BF994257BF6C902C /* Copy Pods Resources */,
+				17E18941F81DAA175E2E2B44 /* [CP] Embed Pods Frameworks */,
+				E694C3E9094017C87CCFEADB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,14 +193,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14BF3AA7BF994257BF6C902C /* Copy Pods Resources */ = {
+		17E18941F81DAA175E2E2B44 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dimelo CocoaPods Sample/Pods-Dimelo CocoaPods Sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E694C3E9094017C87CCFEADB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,19 +223,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dimelo CocoaPods Sample/Pods-Dimelo CocoaPods Sample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3416F3BAA2AA4A7AAC06AE44 /* Check Pods Manifest.lock */ = {
+		E7816F129B8DA08114ADCE87 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -337,7 +353,7 @@
 		};
 		2072790E19CC29A100C40976 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72D0D70B314A08F8F8579715 /* Pods-Dimelo CocoaPods Sample.debug.xcconfig */;
+			baseConfigurationReference = 941CA9CB05036DD2117E48F0 /* Pods-Dimelo CocoaPods Sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DimeloSampleApp/Info.plist;
@@ -352,7 +368,7 @@
 		};
 		2072790F19CC29A100C40976 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37F38ED5D2413B931A4C104A /* Pods-Dimelo CocoaPods Sample.release.xcconfig */;
+			baseConfigurationReference = D92AE51EF0CA8E879685B446 /* Pods-Dimelo CocoaPods Sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DimeloSampleApp/Info.plist;

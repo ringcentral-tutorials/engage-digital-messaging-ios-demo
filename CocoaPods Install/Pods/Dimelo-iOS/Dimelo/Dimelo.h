@@ -2,12 +2,20 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString* const DimeloHTTPErrorDomain;
+
+
 @class Dimelo;
 
 /*!
  * Posted when `-[Dimelo unreadCount]` property is changed.
  */
 extern NSString* const DimeloChatUnreadCountDidChangeNotification;
+
+/*!
+ * Posted when `-[Dimelo welcomeMessage]` property is changed.
+ */
+extern NSString* const DimeloWelcomeMessageDidChangeNotification;
 
 /*!
  * Posted when the user sends a message.
@@ -130,6 +138,18 @@ extern NSString* const DimeloChatDidDisappearNotification;
 - (void) dimeloUnreadCountDidChange:(NSNotification*)notification;
 
 /*!
+ * Called when `-[Dimelo welcomeMessage]` property changes.
+ *
+ * Provided as a courtesy so that you do not need to subscribe to notifications separately
+ * when handling these events in one delegate is enough for your use case.
+ *
+ * @param notification   NSNotification with name DimeloWelcomeMessageDidChangeNotification.
+ *
+ * @see DimeloWelcomeMessageDidChangeNotification
+ */
+- (void) dimeloWelcomeMessageDidChange:(NSNotification*)notification;
+
+/*!
  * Called when the user sends a message.
  *
  * Provided as a courtesy so that you do not need to subscribe to notifications separately
@@ -215,8 +235,8 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * ### Recommended mode: with server-signed authentication token.
  *
  * ```
- * // Instantiate dimelo with public api key and a hostname.
- * Dimelo* dimelo = [[Dimelo alloc] initWithApiKey:@"public api key" hostname:@"api.example.com" delegate:self];
+ * // Instantiate dimelo with public api key and an optional hostname.
+ * Dimelo* dimelo = [[Dimelo sharedInstance] initWithApiKey:@"public api key" hostname:@"api.example.com" delegate:self];
  *
  * // Assign optional properties to include in authenticated JWT token.
  * dimelo.userIdentifier = @"optional user account ID";
@@ -238,8 +258,8 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * ### Unsafe mode which does not require signing a JWT token by your server:
  *
  * ```
- * // Instantiate dimelo with *secret* api key and a hostname.
- * Dimelo* dimelo = [[Dimelo alloc] initWithApiSecret:@"secret api key" hostname:@"api.example.com" delegate:self];
+ * // Instantiate dimelo with *secret* api key and an optional hostname.
+ * Dimelo* dimelo = [[Dimelo sharedInstance] initWithApiSecret:@"secret api key" hostname:@"api.example.com" delegate:self];
  *
  * // Assign optional properties to include in authenticated JWT token.
  * dimelo.userIdentifier = @"optional user account ID";
@@ -263,7 +283,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
 
 
 /*!
-* returns API client configured with config from DimeloConfig.plist
+* Returns a shared API client initialized with config from DimeloConfig.plist
 *
 * For correct operation you will have to provide a valid signed JWT token via `jwt` property.
 * To do so, fill in `userIdentifier`, `authenticationInfo` and send the resulting `jwtDictionary` to your server.
@@ -274,7 +294,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
 + (instancetype)sharedInstance;
 
 /*!
-* Initializes API client with a public API key and a delegate.
+* Initializes a new API client with a public API key and a delegate.
 *
 * Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
 *
@@ -290,7 +310,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
 - (id) initWithApiKey:(NSString*)apiKey delegate:(id<DimeloDelegate>)delegate;
 
 /*!
- * Initializes API client with a public API key, custom hostname and a delegate.
+ * Initializes a new API client with a public API key, custom hostname and a delegate.
  *
  * Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
  *
@@ -307,7 +327,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
 - (id) initWithApiKey:(NSString*)apiKey hostname:(NSString*)hostname delegate:(id<DimeloDelegate>)delegate;
 
 /*!
- * Initializes API client with a secret API key and a delegate.
+ * Initializes a new API client with a secret API key and a delegate.
  *
  * Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
  *
@@ -320,7 +340,7 @@ extern NSString* const DimeloChatDidDisappearNotification;
 - (id) initWithApiSecret:(NSString*)apiSecret delegate:(id<DimeloDelegate>)delegate;
 
 /*!
- * Initializes API client with a secret API key, custom hostname and a delegate.
+ * Initializes a new API client with a secret API key, custom hostname and a delegate.
  *
  * Delegate must not be nil as it is needed to correctly show the chat in various usage scenarios.
  *
@@ -543,6 +563,16 @@ extern NSString* const DimeloChatDidDisappearNotification;
  */
 - (void) noteUnreadCountDidChange;
 
+/*!
+ * Fetch unreadCount.
+ *
+ * In case of error completion will be called with NSNotFound value and the corresponding error.
+ * Completion is called on main thread.
+ *
+ * NSErrors of domain DimeloHTTPErrorDomain will mirror the HTTP code from Dimelo backend's response in their own code property.
+ * You may want to handle special HTTP code responses like 429 Too many requests for example.
+ */
+- (void) fetchUnreadCountWithCompletionHandler:(void (^)(NSInteger unreadCount, NSError *error))completion;
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -668,6 +698,29 @@ extern NSString* const DimeloChatDidDisappearNotification;
  */
 @property(nonatomic) UIColor* loadMoreMessagesButtonTextColor;
 
+/*!
+ * Color for the button "send" in the disabled state.
+ *
+ * If this property is nil (default), this button is colored into [UIColor grayColor].
+ *
+ */
+@property(nonatomic) UIColor* disabledSendButtonColor;
+
+/*!
+ * Font for the message field input
+ *
+ * If this property is nil (default), default font is used
+ *
+ */
+@property(nonatomic) UIFont* messageFieldFont;
+
+/*!
+ * Default font
+ *
+ * If this property is nil (default), default system font is used
+ *
+ */
+@property(nonatomic) UIFont* defaultFont;
 
 ////////////////////////////////////////////////////////////////////////////////
 /// @name Advanced Customization
