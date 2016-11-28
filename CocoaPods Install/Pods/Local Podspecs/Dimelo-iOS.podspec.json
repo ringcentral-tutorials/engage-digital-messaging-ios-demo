@@ -1,0 +1,35 @@
+{
+  "name": "Dimelo-iOS",
+  "version": "1.5.0",
+  "license": {
+    "type": "Proprietary",
+    "file": "LICENSE"
+  },
+  "summary": "Dimelo Mobile Messaging SDK for iOS",
+  "homepage": "https://github.com/dimelo/Dimelo-iOS",
+  "authors": {
+    "Dimelo": "support@dimelo.com"
+  },
+  "source": {
+    "git": "https://github.com/dimelo/Dimelo-iOS.git",
+    "tag": "v1.5.0"
+  },
+  "source_files": "Dimelo/*.h",
+  "public_header_files": "Dimelo/*.h",
+  "vendored_libraries": "Dimelo/libDimelo-iOS.a",
+  "preserve_paths": "Dimelo/libDimelo-iOS.a",
+  "resources": [
+    "Dimelo/*.bundle",
+    "Dimelo/*.xib"
+  ],
+  "platforms": {
+    "ios": "7.1"
+  },
+  "requires_arc": true,
+  "frameworks": [
+    "UIKit",
+    "Accelerate",
+    "MobileCoreServices",
+    "SystemConfiguration"
+  ]
+}
