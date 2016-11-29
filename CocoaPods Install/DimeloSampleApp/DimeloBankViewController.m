@@ -111,11 +111,4 @@
     [self presentViewController:vc animated:YES completion:^{}];
 }
 
-
-
-//- (UIStatusBarStyle) preferredStatusBarStyle
-//{
-//    return UIStatusBarStyleLightContent;
-//}
-
 @end

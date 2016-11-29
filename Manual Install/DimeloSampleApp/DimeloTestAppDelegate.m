@@ -28,43 +28,39 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    
     // 1. Init with secret and sign internally
-    Dimelo* dimelo;
-    {
-        // Prod setup.
-        dimelo = [Dimelo sharedInstance];
-        dimelo.delegate = self;
-
-        #warning Switch this off for AppStore build.
-        dimelo.developmentAPNS = YES;
-
-        // When any of these properties are set, JWT is recomputed instantly.
-        dimelo.userIdentifier = @"U-1000555777";
-        dimelo.authenticationInfo = @{@"bankBranch": @"Test-1234" };
+    Dimelo* dimelo = [Dimelo sharedInstance];
         
-        NSLog(@"APIKey = %@; JWT = %@ (%@)", dimelo.apiKey, dimelo.jwtDictionary, dimelo.jwt);
-    }
-
-    self.tabChatVC = [[Dimelo sharedInstance] chatViewController];
+    //! By default, Dimelo is initialized with apiSecret and hostname field of DimeloConfig.plist
+    //! But you can override this configuration within the code as follow:
+    //! [dimelo setApiKey:@"YOUR_KEY"];
+    //! dimelo.hostname = @"YOUR_HOSTNAME";
     
+    dimelo.delegate = self;
+    
+    #warning Switch this off for AppStore build.
+    dimelo.developmentAPNS = YES;
+    
+    // When any of these properties are set, JWT is recomputed instantly.
+    dimelo.userIdentifier = @"U-1000555777";
+    dimelo.authenticationInfo = @{@"bankBranch": @"Test-1234" };
+
+    //! Initialize dimelo Chat ViewController
+    self.tabChatVC = [dimelo chatViewController];
     self.tabChatVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Support", @"Test App") image:[UIImage imageNamed:@"Support"] selectedImage:[UIImage imageNamed:@"SupportSelected"]];
-    
-    [self.tabBarController addChildViewController:self.tabChatVC];
 
+    //! Initialize tabbar controller
+    [self.tabBarController addChildViewController:self.tabChatVC];
     [self.tabBarController setSelectedIndex:0];
     [self.tabBarController setSelectedIndex:1];
     [self.tabBarController setSelectedIndex:2];
     [self.tabBarController setSelectedIndex:3];
     [self.tabBarController setSelectedIndex:0];
-    
     self.tabBarController.view.backgroundColor = [UIColor colorWithRed:0.708f green:0.875f blue:0.999f alpha:1.000f];
     
-    [[Dimelo sharedInstance] noteUnreadCountDidChange];
+    [dimelo noteUnreadCountDidChange];
     
-    // Handle Notifications
-    
+    //! Handle Notifications
     NSDictionary* dict = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
     if (dict)
     {
@@ -91,11 +87,6 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     return YES;
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    NSLog(@"Test App: App will enter foreground.");
-}
-
 // one of these will be called after calling -registerForRemoteNotifications
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
@@ -110,26 +101,20 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
+    //! If notification is from Dimelo, you don't have to handle anything
     if ([[Dimelo sharedInstance] consumeReceivedRemoteNotification:userInfo])
-    {
-        return;
-    }
+        { return; }
     
-    // You app's handling of this notification.
+    //! Otherwise, here you app's handling of this notification.
 }
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
-    NSLog(@"Test App: App did receive local notification");
-    
-    // We simulate remote notification by putting its payload into a local notification.
+    //! We simulate remote notification by putting its payload into a local notification.
     if ([[Dimelo sharedInstance] consumeReceivedRemoteNotification:notification.userInfo])
-    {
-        return;
-    }
+        { return; }
     
-    // You app's handling of this notification.
-    
+    //! You app's handling of this notification.
 }
 
 
@@ -141,8 +126,6 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 
 
 #pragma mark - <DimeloDelegate>
-
-
 
 - (void) dimeloDisplayChatViewController:(Dimelo*)dimelo
 {
@@ -182,7 +165,6 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 
 
 #pragma mark - Private
-
 
 + (instancetype) sharedInstance
 {
@@ -273,8 +255,6 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 }
 
 // Push notifications test
-
-
 
 - (IBAction) sendShortMessage:(id)sender
 {
