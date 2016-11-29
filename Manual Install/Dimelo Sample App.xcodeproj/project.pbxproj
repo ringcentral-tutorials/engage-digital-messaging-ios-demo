@@ -19,6 +19,10 @@
 		2072792C19CC2E5F00C40976 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072792B19CC2E5F00C40976 /* SystemConfiguration.framework */; };
 		2072793919CC2F0500C40976 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072793519CC2EDE00C40976 /* MobileCoreServices.framework */; };
 		2072793B19CC2FC400C40976 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072793A19CC2FC400C40976 /* Accelerate.framework */; };
+		585AC0E31DEC954100DE3DAC /* DimeloBankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 585AC0DB1DEC954100DE3DAC /* DimeloBankViewController.m */; };
+		585AC0E41DEC954100DE3DAC /* DimeloDefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 585AC0DD1DEC954100DE3DAC /* DimeloDefaultViewController.m */; };
+		585AC0E51DEC954100DE3DAC /* DimeloTelcoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 585AC0DF1DEC954100DE3DAC /* DimeloTelcoViewController.m */; };
+		585AC0E61DEC954100DE3DAC /* DimeloTestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 585AC0E21DEC954100DE3DAC /* DimeloTestAppDelegate.m */; };
 		A10B2E7B1AA7991C00872EC2 /* DimeloConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = A10B2E7A1AA7991C00872EC2 /* DimeloConfig.plist */; };
 		A10B2E7C1AA79C0F00872EC2 /* libDimelo-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072792619CC2C5200C40976 /* libDimelo-iOS.a */; };
 		A10B2E7E1AA79C4000872EC2 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10B2E7D1AA79C4000872EC2 /* AddressBookUI.framework */; };
@@ -47,6 +51,15 @@
 		2072792B19CC2E5F00C40976 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2072793519CC2EDE00C40976 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2072793A19CC2FC400C40976 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		585AC0DA1DEC954100DE3DAC /* DimeloBankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimeloBankViewController.h; sourceTree = "<group>"; };
+		585AC0DB1DEC954100DE3DAC /* DimeloBankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DimeloBankViewController.m; sourceTree = "<group>"; };
+		585AC0DC1DEC954100DE3DAC /* DimeloDefaultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimeloDefaultViewController.h; sourceTree = "<group>"; };
+		585AC0DD1DEC954100DE3DAC /* DimeloDefaultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DimeloDefaultViewController.m; sourceTree = "<group>"; };
+		585AC0DE1DEC954100DE3DAC /* DimeloTelcoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimeloTelcoViewController.h; sourceTree = "<group>"; };
+		585AC0DF1DEC954100DE3DAC /* DimeloTelcoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DimeloTelcoViewController.m; sourceTree = "<group>"; };
+		585AC0E01DEC954100DE3DAC /* DimeloTestApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DimeloTestApp-Prefix.pch"; sourceTree = "<group>"; };
+		585AC0E11DEC954100DE3DAC /* DimeloTestAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimeloTestAppDelegate.h; sourceTree = "<group>"; };
+		585AC0E21DEC954100DE3DAC /* DimeloTestAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DimeloTestAppDelegate.m; sourceTree = "<group>"; };
 		A10B2E7A1AA7991C00872EC2 /* DimeloConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DimeloConfig.plist; sourceTree = "<group>"; };
 		A10B2E7D1AA79C4000872EC2 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		A10B2E7F1AA79C7A00872EC2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -93,6 +106,15 @@
 		207278EC19CC29A100C40976 /* Dimelo Sample App */ = {
 			isa = PBXGroup;
 			children = (
+				585AC0DA1DEC954100DE3DAC /* DimeloBankViewController.h */,
+				585AC0DB1DEC954100DE3DAC /* DimeloBankViewController.m */,
+				585AC0DC1DEC954100DE3DAC /* DimeloDefaultViewController.h */,
+				585AC0DD1DEC954100DE3DAC /* DimeloDefaultViewController.m */,
+				585AC0DE1DEC954100DE3DAC /* DimeloTelcoViewController.h */,
+				585AC0DF1DEC954100DE3DAC /* DimeloTelcoViewController.m */,
+				585AC0E01DEC954100DE3DAC /* DimeloTestApp-Prefix.pch */,
+				585AC0E11DEC954100DE3DAC /* DimeloTestAppDelegate.h */,
+				585AC0E21DEC954100DE3DAC /* DimeloTestAppDelegate.m */,
 				2072791F19CC2C5200C40976 /* Dimelo */,
 				207278F119CC29A100C40976 /* AppDelegate.h */,
 				207278F219CC29A100C40976 /* AppDelegate.m */,
@@ -208,8 +230,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				585AC0E51DEC954100DE3DAC /* DimeloTelcoViewController.m in Sources */,
+				585AC0E41DEC954100DE3DAC /* DimeloDefaultViewController.m in Sources */,
+				585AC0E61DEC954100DE3DAC /* DimeloTestAppDelegate.m in Sources */,
 				207278F619CC29A100C40976 /* ViewController.m in Sources */,
 				207278F319CC29A100C40976 /* AppDelegate.m in Sources */,
+				585AC0E31DEC954100DE3DAC /* DimeloBankViewController.m in Sources */,
 				207278F019CC29A100C40976 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
