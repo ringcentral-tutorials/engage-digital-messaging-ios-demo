@@ -71,7 +71,7 @@
         _dimelo.dateTextColor = [UIColor colorWithWhite:0.0 alpha:0.8f];
     }
 
-    self.tabBarController.tabBar.selectedImageTintColor = _buttonColor ?: self.view.backgroundColor;
+    self.tabBarController.tabBar.tintColor = _buttonColor ?: self.view.backgroundColor;
 }
 
 - (void) openChat:(id)sender

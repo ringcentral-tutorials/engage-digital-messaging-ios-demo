@@ -36,7 +36,7 @@
 {
     [super viewDidAppear:animated];
 
-    self.tabBarController.tabBar.selectedImageTintColor = self.view.tintColor;
+    self.tabBarController.tabBar.tintColor = self.view.tintColor;
 }
 
 - (void)viewDidLoad
