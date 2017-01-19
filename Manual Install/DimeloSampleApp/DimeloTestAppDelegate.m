@@ -35,7 +35,6 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     //! But you can override this configuration within the code as follow:
     //! [dimelo setApiKey:@"YOUR_KEY"];
     //! dimelo.hostname = @"YOUR_HOSTNAME";
-    
     dimelo.delegate = self;
     
     #warning Switch this off for AppStore build.
@@ -56,6 +55,8 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     [self.tabBarController setSelectedIndex:2];
     [self.tabBarController setSelectedIndex:3];
     [self.tabBarController setSelectedIndex:0];
+    
+    dimelo.backgroundView.backgroundColor = [UIColor colorWithRed:0.708f green:0.875f blue:0.999f alpha:1.000f];
     self.tabBarController.view.backgroundColor = [UIColor colorWithRed:0.708f green:0.875f blue:0.999f alpha:1.000f];
     
     [dimelo noteUnreadCountDidChange];
@@ -277,7 +278,7 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
                                     }
                             };
     
-    if (0)
+    if (/* DISABLES CODE */ (0))
     {
         // on iOS8 simulator local notif does not work somehow...
         
@@ -323,7 +324,7 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
                                     }
                             };
     
-    if (0)
+    if (/* DISABLES CODE */ (0))
     {
         // on iOS8 simulator local notif does not work somehow...
         

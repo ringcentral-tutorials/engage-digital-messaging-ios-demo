@@ -278,6 +278,28 @@ extern NSString* const DimeloChatDidDisappearNotification;
 
 
 ////////////////////////////////////////////////////////////////////////////////
+/// Attachments state (retrieval & disabling)
+////////////////////////////////////////////////////////////////////////////////
+
+/*!
+ * disable state of individual attachment category or all of them
+ *
+ */
++ (void) disableLibraryAttachment;
++ (void) disableCameraAttachment;
++ (void) disableLocationAttachment;
++ (void) disableAttachments;
+
+/*!
+ * Get state of individual attachment category or all of them
+ *
+ */
++ (bool) isLibraryAttachmentEnabled;
++ (bool) isCameraAttachmentEnabled;
++ (bool) isLocationAttachmentEnabled;
++ (bool) isAttachmentsEnabled;
+
+////////////////////////////////////////////////////////////////////////////////
 /// @name Setting up an API client
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -573,6 +595,12 @@ extern NSString* const DimeloChatDidDisappearNotification;
  * You may want to handle special HTTP code responses like 429 Too many requests for example.
  */
 - (void) fetchUnreadCountWithCompletionHandler:(void (^)(NSInteger unreadCount, NSError *error))completion;
+
+
+////////////////////////////////////////////////////////////////////////////////
+/// @name Application language
+////////////////////////////////////////////////////////////////////////////////
+@property(nonatomic) NSString* language;
 
 
 ////////////////////////////////////////////////////////////////////////////////

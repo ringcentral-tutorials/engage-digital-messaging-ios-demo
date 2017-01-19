@@ -4,10 +4,10 @@
 <dict>
 	<key>apiKey</key>
 	<string></string>
-	<key>hostname</key>
-<string></string>
 	<key>apiSecret</key>
-<string></string>
+	<string></string>
+	<key>language</key>
+	<string>en</string>
 	<key>title</key>
 	<string>Support Chat</string>
 	<key>tintColor</key>
