@@ -1,6 +1,6 @@
 {
   "name": "Dimelo-iOS",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "license": {
     "type": "Proprietary",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/dimelo/Dimelo-iOS.git",
-    "tag": "v1.6.0"
+    "tag": "v1.6.1"
   },
   "source_files": "Dimelo/*.h",
   "public_header_files": "Dimelo/*.h",
