@@ -44,6 +44,10 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>The application requires access to GPS to locate you</string>
+	<string>To Send location to a support team.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>To send a picture to a support team.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>To send a picture to a support team.</string>
 </dict>
 </plist>
