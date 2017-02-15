@@ -37,7 +37,7 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     //! dimelo.hostname = @"YOUR_HOSTNAME";
     dimelo.delegate = self;
     
-    #warning Switch this off for AppStore build.
+    #warning Switch this off when using a distribution provisioning profil
     dimelo.developmentAPNS = YES;
     
     // When any of these properties are set, JWT is recomputed instantly.
