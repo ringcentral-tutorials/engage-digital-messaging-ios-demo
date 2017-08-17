@@ -367,7 +367,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/DimeloSampleApp/Dimelo",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dimelo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pierlis.dimelo.Dimelo-Sample-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -384,7 +384,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/DimeloSampleApp/Dimelo",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dimelo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pierlis.dimelo.Dimelo-Sample-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
