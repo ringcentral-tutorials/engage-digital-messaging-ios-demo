@@ -66,6 +66,7 @@
 		585AC0E01DEC954100DE3DAC /* DimeloTestApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DimeloTestApp-Prefix.pch"; sourceTree = "<group>"; };
 		585AC0E11DEC954100DE3DAC /* DimeloTestAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimeloTestAppDelegate.h; sourceTree = "<group>"; };
 		585AC0E21DEC954100DE3DAC /* DimeloTestAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DimeloTestAppDelegate.m; sourceTree = "<group>"; };
+		8330F17C1F45A4D400F266CE /* Dimelo Sample App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Dimelo Sample App.entitlements"; sourceTree = SOURCE_ROOT; };
 		A10B2E7A1AA7991C00872EC2 /* DimeloConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DimeloConfig.plist; sourceTree = "<group>"; };
 		A10B2E7D1AA79C4000872EC2 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		A10B2E7F1AA79C7A00872EC2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -113,6 +114,7 @@
 		207278EC19CC29A100C40976 /* Dimelo Sample App */ = {
 			isa = PBXGroup;
 			children = (
+				8330F17C1F45A4D400F266CE /* Dimelo Sample App.entitlements */,
 				585AC0DA1DEC954100DE3DAC /* DimeloBankViewController.h */,
 				585AC0DB1DEC954100DE3DAC /* DimeloBankViewController.m */,
 				585AC0DC1DEC954100DE3DAC /* DimeloDefaultViewController.h */,
@@ -180,6 +182,12 @@
 				TargetAttributes = {
 					207278E919CC29A100C40976 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 8ZA7UMKMTJ;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -341,6 +349,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Dimelo Sample App.entitlements";
+				DEVELOPMENT_TEAM = 8ZA7UMKMTJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -360,6 +370,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Dimelo Sample App.entitlements";
+				DEVELOPMENT_TEAM = 8ZA7UMKMTJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

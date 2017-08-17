@@ -36,7 +36,6 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     //! [dimelo setApiKey:@"YOUR_KEY"];
     //! dimelo.hostname = @"YOUR_HOSTNAME";
     dimelo.delegate = self;
-    
     #warning Switch this off when using a distribution provisioning profil
     dimelo.developmentAPNS = YES;
     
