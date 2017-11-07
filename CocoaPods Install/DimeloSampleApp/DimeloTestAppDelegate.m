@@ -117,6 +117,16 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     //! You app's handling of this notification.
 }
 
+- (void)application:(UIApplication*)application handleActionWithIdentifier:(nullable NSString*)identifier forRemoteNotification:(NSDictionary*)userInfo withResponseInfo:(NSDictionary*)responseInfo completionHandler:(void (^) ())completionHandler {
+
+    [[Dimelo sharedInstance] handleRemoteNotificationWithIdentifier: identifier responseInfo: responseInfo];
+
+    if (completionHandler) {
+
+        completionHandler();
+    }
+}
+
 
 
 

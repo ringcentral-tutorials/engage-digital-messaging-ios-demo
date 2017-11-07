@@ -111,4 +111,12 @@
     [self presentViewController:vc animated:YES completion:^{}];
 }
 
+-(void)onOpen:(Dimelo *)dimelo{
+    NSLog(@"on open userIdentifier : %@, userName : %@  authenticationInfo :%@", dimelo.userIdentifier, dimelo.userName, dimelo.authenticationInfo);
+}
+
+-(void)onClose:(Dimelo *)dimelo{
+
+    NSLog(@"on close userIdentifier : %@, userName : %@  authenticationInfo :%@", dimelo.userIdentifier, dimelo.userName, dimelo.authenticationInfo);
+}
 @end

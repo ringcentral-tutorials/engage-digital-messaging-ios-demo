@@ -1,0 +1,69 @@
+
+/* Class = "UIButton"; normalTitle = "Simulate Longer Notification"; ObjectID = "1vZ-BT-hns"; */
+"1vZ-BT-hns.normalTitle" = "Simuler une notification plus longue";
+
+/* Class = "UIButton"; normalTitle = "View Billing"; ObjectID = "23C-6a-fqq"; */
+"23C-6a-fqq.normalTitle" = "Voir la facturation";
+
+/* Class = "UIButton"; normalTitle = "BTC Exchange"; ObjectID = "3b9-4D-3rK"; */
+"3b9-4D-3rK.normalTitle" = "Echange BTC";
+
+/* Class = "UIButton"; normalTitle = "Bonus Features"; ObjectID = "4Qm-Au-vkq"; */
+"4Qm-Au-vkq.normalTitle" = "Fonctionnalités bonus";
+
+/* Class = "UIButton"; normalTitle = "Open Popover"; ObjectID = "8hj-0M-gNk"; */
+"8hj-0M-gNk.normalTitle" = "Ouvrir un Popover";
+
+/* Class = "UILabel"; text = "Local Bank"; ObjectID = "9px-4B-y20"; */
+"9px-4B-y20.text" = "Banque locale";
+
+/* Class = "UIButton"; normalTitle = "Open Full Screen"; ObjectID = "CIJ-qp-bpZ"; */
+"CIJ-qp-bpZ.normalTitle" = "Ouvrir en plein écran";
+
+/* Class = "UIButton"; normalTitle = "Live Support"; ObjectID = "DcV-iH-sI4"; */
+"DcV-iH-sI4.normalTitle" = "Support en direct";
+
+/* Class = "UIButton"; normalTitle = "Upgrade your iPhone"; ObjectID = "F8U-N1-Ngb"; */
+"F8U-N1-Ngb.normalTitle" = "Améliorez votre iPhone";
+
+/* Class = "UILabel"; text = "Here you can test chat UI in different context: modal and tabbar.\n\nTap the button below to open a modal chat. Select another tab to open a chat in the tab view."; ObjectID = "FOp-2e-X0f"; */
+"FOp-2e-X0f.text" = "Ici, vous pouvez tester l'interface utilisateur de chat dans un contexte différent: modal et tabbarie.\n\n Appuyez sur le bouton ci-dessous pour ouvrir un chat modal. Sélectionnez un autre onglet pour ouvrir un chat dans la vue des onglets.";
+
+/* Class = "UIButton"; normalTitle = "Funds Transfer"; ObjectID = "IGM-gg-xai"; */
+"IGM-gg-xai.normalTitle" = "Transfert de fonds";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "K8B-Cd-Tca"; */
+"K8B-Cd-Tca.text" = "3";
+
+/* Class = "UILabel"; text = "MyTelecom"; ObjectID = "P6c-UG-q9L"; */
+"P6c-UG-q9L.text" = "MyTelecom";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "Twe-d4-SXP"; */
+"Twe-d4-SXP.title" = "Item";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "VZ5-nd-aJ6"; */
+"VZ5-nd-aJ6.title" = "Item";
+
+/* Class = "UILabel"; text = "Welcome to your new banking application. Consult your accounts, make transfers and play on the stock market with just a tap."; ObjectID = "VeR-H0-Qwh"; */
+"VeR-H0-Qwh.text" = "Bienvenue dans votre nouvelle application bancaire. Consultez vos comptes, faites des transferts et jouez sur le marché boursier avec juste une touche.";
+
+/* Class = "UIButton"; normalTitle = "Online Support"; ObjectID = "Vnm-4p-QZg"; */
+"Vnm-4p-QZg.normalTitle" = "Support en ligne";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "Vo6-IF-BoD"; */
+"Vo6-IF-BoD.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Simulate Short Notification"; ObjectID = "Yi3-hi-Yoy"; */
+"Yi3-hi-Yoy.normalTitle" = "Simuler la notification courte";
+
+/* Class = "UIButton"; normalTitle = "Open Chat"; ObjectID = "a4b-W3-nHd"; */
+"a4b-W3-nHd.normalTitle" = "Ouvrir le chat";
+
+/* Class = "UIButton"; normalTitle = "My Accounts"; ObjectID = "krp-3I-trW"; */
+"krp-3I-trW.normalTitle" = "Mes comptes";
+
+/* Class = "UILabel"; text = "Welcome to Dimelo Test App"; ObjectID = "lbb-Fa-BVE"; */
+"lbb-Fa-BVE.text" = "Bienvenue l'application de test de Dimelo";
+
+/* Class = "UILabel"; text = "Thank you for updating to our new app. Here you can upgrade your plan and subscribe to our additional services."; ObjectID = "mxE-0B-meP"; */
+"mxE-0B-meP.text" = "Nous vous remercions de votre mise à jour pour notre nouvelle application. Ici, vous pouvez mettre à niveau votre plan et vous inscrire à nos services supplémentaires.";

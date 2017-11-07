@@ -2,16 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>navigationBarTitleColor</key>
+	<string>#e50b0b</string>
 	<key>apiKey</key>
 	<string></string>
 	<key>apiSecret</key>
 	<string></string>
 	<key>language</key>
 	<string>en</string>
-	<key>title</key>
-	<string>Support Chat</string>
 	<key>tintColor</key>
-	<string></string>
+	<string>#551A8B</string>
+	<key>cursorTintColor</key>
+	<string>#18d5f0</string>
+	<key>navigationBarItemTintColor</key>
+	<string>#551A8B</string>
+	<key>sendTintColor</key>
+	<string>#cfe01a</string>
 	<key>navigationBarTintColor</key>
 	<string></string>
 	<key>navigationBarColor</key>
@@ -82,5 +88,7 @@
 		<key>size</key>
 		<integer>13</integer>
 	</dict>
+	<key>interactiveNotification</key>
+	<true/>
 </dict>
 </plist>
