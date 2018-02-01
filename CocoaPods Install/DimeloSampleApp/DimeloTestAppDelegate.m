@@ -7,7 +7,7 @@
 //
 
 #import "DimeloTestAppDelegate.h"
-#import "Dimelo.h"
+#import "Dimelo/Dimelo.h"
 
 @interface DimeloTestAppDelegate () <DimeloDelegate, UIPopoverControllerDelegate>
 @property(nonatomic, readonly) UITabBarController* tabBarController;

@@ -1,6 +1,6 @@
 {
   "name": "Dimelo-iOS",
-  "version": "1.7.6",
+  "version": "1.7.7",
   "license": {
     "type": "Proprietary",
     "file": "LICENSE"
@@ -12,12 +12,8 @@
   },
   "source": {
     "git": "https://github.com/dimelo/Dimelo-iOS.git",
-    "tag": "v1.7.6"
+    "tag": "v1.7.7"
   },
-  "source_files": "Dimelo/*.h",
-  "public_header_files": "Dimelo/*.h",
-  "vendored_libraries": "Dimelo/libDimelo-iOS.a",
-  "preserve_paths": "Dimelo/libDimelo-iOS.a",
   "resources": [
     "Dimelo/*.bundle",
     "Dimelo/*.xib"
@@ -31,5 +27,6 @@
     "Accelerate",
     "MobileCoreServices",
     "SystemConfiguration"
-  ]
+  ],
+  "vendored_frameworks": "Dimelo.framework"
 }

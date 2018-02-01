@@ -13,21 +13,19 @@
 
 /* Begin PBXFileReference section */
 		052027DBEC1CF9959D214AFA8DDA36D1 /* Pods-Dimelo CocoaPods Sample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Dimelo CocoaPods Sample-frameworks.sh"; sourceTree = "<group>"; };
-		2EB742261A7AFC9FF526C69ACD8F0286 /* Dimelo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Dimelo.h; path = Dimelo/Dimelo.h; sourceTree = "<group>"; };
-		404363D67CE55F618C7FF374382A49C1 /* DimeloChatInputAccessoryView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DimeloChatInputAccessoryView.xib; path = Dimelo/DimeloChatInputAccessoryView.xib; sourceTree = "<group>"; };
-		632487407803ACC275BC84AA0A386A34 /* DimeloChatInputAccessoryView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DimeloChatInputAccessoryView.h; path = Dimelo/DimeloChatInputAccessoryView.h; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6E5245207B87F563DF79430DD0DF34FB /* libDimelo-iOS.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = "libDimelo-iOS.a"; path = "Dimelo/libDimelo-iOS.a"; sourceTree = "<group>"; };
+		69982F03C79B38176537CADD70AFDF0D /* DimeloChatInputAccessoryView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DimeloChatInputAccessoryView.xib; path = Dimelo/DimeloChatInputAccessoryView.xib; sourceTree = "<group>"; };
 		6F01CB1A214F9D3D47055BE2729F2AD5 /* Pods-Dimelo CocoaPods Sample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Dimelo CocoaPods Sample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		85DFABBF6F4F4758D3D123112AA278E9 /* Pods-Dimelo CocoaPods Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Dimelo CocoaPods Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		90E377EF895D3E53833E5618EA45C670 /* Pods-Dimelo CocoaPods Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Dimelo CocoaPods Sample.release.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94344B711E9A34D64030E3B83C254E3A /* Pods-Dimelo CocoaPods Sample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Dimelo CocoaPods Sample-resources.sh"; sourceTree = "<group>"; };
-		AB20A1A02E0C8CD8E057A68CB5882079 /* Dimelo.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Dimelo.bundle; path = Dimelo/Dimelo.bundle; sourceTree = "<group>"; };
+		96BB39DB9B091A92D7A700E16F6A9B79 /* Dimelo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dimelo.framework; sourceTree = "<group>"; };
 		AFFE789F0157590A088F5658BB5D29EE /* Pods-Dimelo CocoaPods Sample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Dimelo CocoaPods Sample-dummy.m"; sourceTree = "<group>"; };
 		BBCC0026C38122A18C3AB59D4F8D6245 /* Pods-Dimelo CocoaPods Sample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Dimelo CocoaPods Sample-acknowledgements.plist"; sourceTree = "<group>"; };
+		D072719D7D895621096D9EE514B11563 /* DimeloChatNotificationContentView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DimeloChatNotificationContentView.xib; path = Dimelo/DimeloChatNotificationContentView.xib; sourceTree = "<group>"; };
 		D4E83F1FD3B662B533ADC6536EC95B2C /* libPods-Dimelo CocoaPods Sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Dimelo CocoaPods Sample.a"; path = "libPods-Dimelo CocoaPods Sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7FE8A584D6014438E8D0344198E75FB /* DimeloChatNotificationContentView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DimeloChatNotificationContentView.xib; path = Dimelo/DimeloChatNotificationContentView.xib; sourceTree = "<group>"; };
+		E5FA8CE05F31731D337877490CE6278E /* Dimelo.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Dimelo.bundle; path = Dimelo/Dimelo.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,34 +40,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01030A468E681A0D3A9E2B42D9C152BC /* Frameworks */ = {
+		08DB24026386398B5E56FC89C3951840 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6E5245207B87F563DF79430DD0DF34FB /* libDimelo-iOS.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		77BDB3EC2EC198B5910176C0AD7913F0 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				AB20A1A02E0C8CD8E057A68CB5882079 /* Dimelo.bundle */,
-				404363D67CE55F618C7FF374382A49C1 /* DimeloChatInputAccessoryView.xib */,
-				D7FE8A584D6014438E8D0344198E75FB /* DimeloChatNotificationContentView.xib */,
+				E5FA8CE05F31731D337877490CE6278E /* Dimelo.bundle */,
+				69982F03C79B38176537CADD70AFDF0D /* DimeloChatInputAccessoryView.xib */,
+				D072719D7D895621096D9EE514B11563 /* DimeloChatNotificationContentView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		799A6E774D5ABD703A7251C38445EB4D /* Dimelo-iOS */ = {
+		1DA9514AC1198290EB35DE85C136155A /* Dimelo-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				2EB742261A7AFC9FF526C69ACD8F0286 /* Dimelo.h */,
-				632487407803ACC275BC84AA0A386A34 /* DimeloChatInputAccessoryView.h */,
-				01030A468E681A0D3A9E2B42D9C152BC /* Frameworks */,
-				77BDB3EC2EC198B5910176C0AD7913F0 /* Resources */,
+				786EE142FE25BC040242C0A40F8B968B /* Frameworks */,
+				08DB24026386398B5E56FC89C3951840 /* Resources */,
 			);
 			name = "Dimelo-iOS";
 			path = "Dimelo-iOS";
+			sourceTree = "<group>";
+		};
+		786EE142FE25BC040242C0A40F8B968B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96BB39DB9B091A92D7A700E16F6A9B79 /* Dimelo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -77,7 +73,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				DAF537E70546D08FD7B2AB2773294C6A /* Pods */,
+				E5C585ADB8E6DFFC6DC066FDB9B49B29 /* Pods */,
 				8E0312AF0B6A4ED8BC9661FB71DA0D4B /* Products */,
 				9CF4FF2150F4D4323851D8D657EE00B8 /* Targets Support Files */,
 			);
@@ -130,10 +126,10 @@
 			path = "Target Support Files/Pods-Dimelo CocoaPods Sample";
 			sourceTree = "<group>";
 		};
-		DAF537E70546D08FD7B2AB2773294C6A /* Pods */ = {
+		E5C585ADB8E6DFFC6DC066FDB9B49B29 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				799A6E774D5ABD703A7251C38445EB4D /* Dimelo-iOS */,
+				1DA9514AC1198290EB35DE85C136155A /* Dimelo-iOS */,
 			);
 			name = Pods;
 			sourceTree = "<group>";

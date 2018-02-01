@@ -7,7 +7,7 @@
 //
 
 #import "DimeloDefaultViewController.h"
-#import "Dimelo.h"
+#import "Dimelo/Dimelo.h"
 
 @interface DimeloDefaultViewController ()
 

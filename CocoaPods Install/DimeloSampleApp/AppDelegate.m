@@ -1,5 +1,5 @@
 #import "AppDelegate.h"
-#import "Dimelo.h"
+#import "Dimelo/Dimelo.h"
 
 @interface AppDelegate () <DimeloDelegate>
 @end

@@ -30,10 +30,6 @@
 	<string>To Send location to a support team.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>To send a picture to a support team.</string>
-	<key>NSCameraUsageDescription</key>
-	<string>To send a picture to a support team.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>To Send location to a support team.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Main</string>
 	<key>UIMainStoryboardFile</key>

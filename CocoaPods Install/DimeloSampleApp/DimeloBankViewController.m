@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Dimelo. All rights reserved.
 //
 
-#import "Dimelo.h"
+#import "Dimelo/Dimelo.h"
 #import "DimeloBankViewController.h"
 #import "DimeloTestAppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
