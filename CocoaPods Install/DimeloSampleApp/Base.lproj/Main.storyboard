@@ -60,6 +60,7 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIJ-qp-bpZ">
                                                 <rect key="frame" x="124.5" y="291" width="126" height="33"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="full_screen"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Open Full Screen">
                                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -80,6 +81,7 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yi3-hi-Yoy">
                                                 <rect key="frame" x="90.5" y="377" width="194" height="33"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="simulate_push"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Simulate Short Notification">
                                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
