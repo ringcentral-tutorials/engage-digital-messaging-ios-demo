@@ -1,22 +1,22 @@
 PODS:
-  - Dimelo-iOS (1.7.8)
+  - Dimelo-iOS (1.7.9)
 
 DEPENDENCIES:
-  - Dimelo-iOS (from `https://github.com/dimelo/Dimelo-iOS`, tag `v1.7.8`)
+  - Dimelo-iOS (from `https://github.com/dimelo/Dimelo-iOS`, tag `v1.7.9`)
 
 EXTERNAL SOURCES:
   Dimelo-iOS:
     :git: https://github.com/dimelo/Dimelo-iOS
-    :tag: v1.7.8
+    :tag: v1.7.9
 
 CHECKOUT OPTIONS:
   Dimelo-iOS:
     :git: https://github.com/dimelo/Dimelo-iOS
-    :tag: v1.7.8
+    :tag: v1.7.9
 
 SPEC CHECKSUMS:
-  Dimelo-iOS: 7408c9679775b37891ffd4da588b757a54ad2273
+  Dimelo-iOS: ac1ff3db4e767f39a8e2b915c7fc723b3f3155c7
 
-PODFILE CHECKSUM: 0aca4cbcd246f046277f4d42c2e6abe78646c550
+PODFILE CHECKSUM: d80a30b72366b10798185c1fba8bc7f92affee74
 
 COCOAPODS: 1.3.1
