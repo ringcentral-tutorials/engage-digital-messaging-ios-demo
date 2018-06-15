@@ -43,7 +43,7 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     dimelo.developmentAPNS = YES;
     
     // When any of these properties are set, JWT is recomputed instantly.
-    dimelo.userIdentifier = @"U-1000555777";
+//    dimelo.userIdentifier = @"U-1000555777";
     dimelo.authenticationInfo = @{@"bankBranch": @"Test-1234" };
 
     //! Initialize dimelo Chat ViewController
@@ -399,6 +399,10 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 {
     [self.unreadUpdateTimer invalidate];
     self.unreadUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:self.unreadFetchInterval target:self selector:@selector(updateUnreadCount) userInfo:nil repeats:NO];
+}
+
+- (void)dimeloChatDidSendMessage:(NSNotification *)notification{
+    Dimelo.sharedInstance.messageContextInfo = @{@"extra": @"1234"};
 }
 
 @end
