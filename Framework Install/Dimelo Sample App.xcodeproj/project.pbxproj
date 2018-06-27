@@ -22,6 +22,8 @@
 		585AC0E41DEC954100DE3DAC /* DimeloDefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 585AC0DD1DEC954100DE3DAC /* DimeloDefaultViewController.m */; };
 		585AC0E51DEC954100DE3DAC /* DimeloTelcoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 585AC0DF1DEC954100DE3DAC /* DimeloTelcoViewController.m */; };
 		585AC0E61DEC954100DE3DAC /* DimeloTestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 585AC0E21DEC954100DE3DAC /* DimeloTestAppDelegate.m */; };
+		8349205720E1450300881BD0 /* Bugsnag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8349205520E144F000881BD0 /* Bugsnag.framework */; };
+		8349205820E1450300881BD0 /* Bugsnag.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8349205520E144F000881BD0 /* Bugsnag.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A10B2E7B1AA7991C00872EC2 /* DimeloConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = A10B2E7A1AA7991C00872EC2 /* DimeloConfig.plist */; };
 		A10B2E7E1AA79C4000872EC2 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10B2E7D1AA79C4000872EC2 /* AddressBookUI.framework */; };
 		A10B2E801AA79C7A00872EC2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10B2E7F1AA79C7A00872EC2 /* MapKit.framework */; };
@@ -35,6 +37,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8349205820E1450300881BD0 /* Bugsnag.framework in Embed Frameworks */,
 				58178A391E48E8170020A6B9 /* Dimelo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -67,6 +70,7 @@
 		585AC0E11DEC954100DE3DAC /* DimeloTestAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimeloTestAppDelegate.h; sourceTree = "<group>"; };
 		585AC0E21DEC954100DE3DAC /* DimeloTestAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DimeloTestAppDelegate.m; sourceTree = "<group>"; };
 		8330F17C1F45A4D400F266CE /* Dimelo Sample App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Dimelo Sample App.entitlements"; sourceTree = SOURCE_ROOT; };
+		8349205520E144F000881BD0 /* Bugsnag.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugsnag.framework; sourceTree = "<group>"; };
 		A10B2E7A1AA7991C00872EC2 /* DimeloConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DimeloConfig.plist; sourceTree = "<group>"; };
 		A10B2E7D1AA79C4000872EC2 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		A10B2E7F1AA79C7A00872EC2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -82,6 +86,7 @@
 				A10B2E801AA79C7A00872EC2 /* MapKit.framework in Frameworks */,
 				A10B2E7E1AA79C4000872EC2 /* AddressBookUI.framework in Frameworks */,
 				2072793B19CC2FC400C40976 /* Accelerate.framework in Frameworks */,
+				8349205720E1450300881BD0 /* Bugsnag.framework in Frameworks */,
 				2072793919CC2F0500C40976 /* MobileCoreServices.framework in Frameworks */,
 				58178A381E48E8170020A6B9 /* Dimelo.framework in Frameworks */,
 				2072792C19CC2E5F00C40976 /* SystemConfiguration.framework in Frameworks */,
@@ -94,6 +99,7 @@
 		207278E119CC29A100C40976 = {
 			isa = PBXGroup;
 			children = (
+				8349205520E144F000881BD0 /* Bugsnag.framework */,
 				58178A361E48E7D60020A6B9 /* Dimelo.framework */,
 				A10B2E811AA79CAF00872EC2 /* CoreLocation.framework */,
 				A10B2E7F1AA79C7A00872EC2 /* MapKit.framework */,
