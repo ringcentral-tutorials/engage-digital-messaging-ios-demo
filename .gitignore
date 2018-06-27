@@ -13,4 +13,5 @@ DerivedData/
 *.mode2v3
 *.perspectivev3
 *.moved-aside
-
+CocoaPods\ Install/Pods/
+CocoaPods\ Install/Podfile.lock
