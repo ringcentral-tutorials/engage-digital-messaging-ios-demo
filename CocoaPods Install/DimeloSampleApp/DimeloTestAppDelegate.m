@@ -401,8 +401,4 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     self.unreadUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:self.unreadFetchInterval target:self selector:@selector(updateUnreadCount) userInfo:nil repeats:NO];
 }
 
-- (void)dimeloChatDidSendMessage:(NSNotification *)notification{
-    Dimelo.sharedInstance.messageContextInfo = @{@"extra": @"1234"};
-}
-
 @end
