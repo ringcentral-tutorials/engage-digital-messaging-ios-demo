@@ -31,17 +31,16 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // 1. Init with secret and sign internally
     Dimelo* dimelo = [Dimelo sharedInstance];
-        
-    //! By default, Dimelo is initialized with apiSecret and hostname field of DimeloConfig.plist
+
+    //! By default, Dimelo is initialized with apiSecret and domainName field of DimeloConfig.plist
     //! But you can override this configuration within the code as follow:
-    //! [dimelo setApiKey:@"YOUR_KEY"];
-    //! dimelo.hostname = @"YOUR_HOSTNAME";
+    //! [dimelo initWithApiSecret: @"YOUR_API_SECRET" domainName:@"YOUR_DOMAIN_NAME" delegate: DELEGATE];
     dimelo.delegate = self;
+
     #warning Switch this off when using a distribution provisioning profil
     dimelo.developmentAPNS = YES;
-    
+
     // When any of these properties are set, JWT is recomputed instantly.
     dimelo.userIdentifier = @"U-1000555777";
     dimelo.authenticationInfo = @{@"bankBranch": @"Test-1234" };
@@ -94,7 +93,7 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     [config addBeforeSendBlock:^bool (NSDictionary *_Nonnull rawEventData, BugsnagCrashReport *report) {
         [report addMetadata:@{@"X-Dimelo-Version": dimelo.sdkVersion} toTabWithName:@"Dimelo"];
         [report addMetadata:@{@"X-Dml-Jwt": dimelo.jwt} toTabWithName:@"Dimelo"];
-        [report addMetadata:@{@"X-Dimelo-HostName": dimelo.hostname} toTabWithName:@"Dimelo"];
+        [report addMetadata:@{@"X-Dimelo-DomainName": dimelo.domainName} toTabWithName:@"Dimelo"];
         return YES;
     }];
     [Bugsnag startBugsnagWithConfiguration:config];
