@@ -6,6 +6,8 @@
 	<string>#e50b0b</string>
 	<key>apiKey</key>
 	<string></string>
+	<key>domainName</key>
+	<string></string>
 	<key>apiSecret</key>
 	<string></string>
 	<key>language</key>
