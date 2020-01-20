@@ -8,9 +8,6 @@
 
 #import "DimeloTestAppDelegate.h"
 #import "Dimelo/Dimelo.h"
-#import "Bugsnag/Bugsnag.h"
-
-NSString* const BUGSNAG_API_KEY = @"41df59ca3b6a42aa9951090a68eac821";
 
 @interface DimeloTestAppDelegate () <DimeloDelegate, UIPopoverControllerDelegate>
 @property(nonatomic, readonly) UITabBarController* tabBarController;
@@ -85,18 +82,6 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     
     self.unreadFetchInterval = defaultUnreadFetchInterval;
     [self updateUnreadCount];
-
-    //Initialize Bugsnag
-    BugsnagConfiguration *config = [BugsnagConfiguration new];
-    config.apiKey = BUGSNAG_API_KEY;
-    // Add Dimelo datas to Bugsnag
-    [config addBeforeSendBlock:^bool (NSDictionary *_Nonnull rawEventData, BugsnagCrashReport *report) {
-        [report addMetadata:@{@"X-Dimelo-Version": dimelo.sdkVersion} toTabWithName:@"Dimelo"];
-        [report addMetadata:@{@"X-Dml-Jwt": dimelo.jwt} toTabWithName:@"Dimelo"];
-        [report addMetadata:@{@"X-Dimelo-DomainName": dimelo.domainName} toTabWithName:@"Dimelo"];
-        return YES;
-    }];
-    [Bugsnag startBugsnagWithConfiguration:config];
 
     return YES;
 }
