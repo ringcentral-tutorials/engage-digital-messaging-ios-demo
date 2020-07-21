@@ -39,7 +39,17 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     dimelo.developmentAPNS = YES;
 
     // When any of these properties are set, JWT is recomputed instantly.
-    dimelo.userIdentifier = @"U-1000555777";
+    if ([[[NSProcessInfo processInfo] arguments] containsObject: @"isUITest"]) {
+        dimelo.userIdentifier = @"test-1000555777";
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DimeloConfig" ofType:@"plist"];
+        NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile: filePath];
+        NSString *apiSecret = [dict objectForKey:@"apiSecret"];
+        if (apiSecret && apiSecret.length > 0) {
+            [dimelo initializeWithApiSecretAndHostName: apiSecret hostName: @"domain-test.messaging.dimelo.info" delegate: nil];
+        }
+    } else {
+        dimelo.userIdentifier = @"U-1000555777";
+    }
     dimelo.authenticationInfo = @{@"bankBranch": @"Test-1234" };
 
     //! Initialize dimelo Chat ViewController
@@ -53,9 +63,6 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     [self.tabBarController setSelectedIndex:2];
     [self.tabBarController setSelectedIndex:3];
     [self.tabBarController setSelectedIndex:0];
-    
-    dimelo.backgroundView.backgroundColor = [UIColor colorWithRed:0.708f green:0.875f blue:0.999f alpha:1.000f];
-    self.tabBarController.view.backgroundColor = [UIColor colorWithRed:0.708f green:0.875f blue:0.999f alpha:1.000f];
     
     [dimelo noteUnreadCountDidChange];
     

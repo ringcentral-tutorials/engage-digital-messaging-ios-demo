@@ -61,9 +61,7 @@
 
             _dimelo.userMessageBubbleImage   = [userBubble imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
             _dimelo.agentMessageBubbleImage  = [agentBubble imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-            _dimelo.systemMessageBubbleImage = [[[UIImage imageNamed:@"DimeloBankSystemBubble"]
-                                          resizableImageWithCapInsets:UIEdgeInsetsMake(18, 36, 18, 19) resizingMode:UIImageResizingModeStretch]
-                                         imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+            _dimelo.systemMessageBubbleImage = [[[UIImage imageNamed: @"DimeloBankSystemBubble"] resizableImageWithCapInsets: UIEdgeInsetsMake(18, 36, 18, 19) resizingMode: UIImageResizingModeStretch] imageWithRenderingMode: UIImageRenderingModeAlwaysTemplate];
 
             _dimelo.userAttachmentBubbleImage  = userBubble;
             _dimelo.agentAttachmentBubbleImage = agentBubble;

@@ -28,6 +28,8 @@
 	<string>To send a picture to a support team.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>To Send location to a support team.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>To Send location to a support team.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>To send a picture to a support team.</string>
 	<key>NSCameraUsageDescription</key>
@@ -47,6 +49,8 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
