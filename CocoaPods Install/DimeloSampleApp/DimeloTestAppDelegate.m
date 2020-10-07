@@ -63,9 +63,9 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     [self.tabBarController setSelectedIndex:2];
     [self.tabBarController setSelectedIndex:3];
     [self.tabBarController setSelectedIndex:0];
-    
+
     [dimelo noteUnreadCountDidChange];
-    
+
     //! Handle Notifications
     NSDictionary* dict = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
     if (dict)
@@ -75,7 +75,7 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
             // Handle app-specific notifications...
         }
     }
-    
+
     UILocalNotification* localNotif = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey];
     if (localNotif)
     {
@@ -85,50 +85,69 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
             // Handle app-specific local notifications...
         }
     }
-    
-    
+
     self.unreadFetchInterval = defaultUnreadFetchInterval;
     [self updateUnreadCount];
+
+    if (@available(iOS 10.0, *)) {
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
+    }
 
     return YES;
 }
 
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+    if (![[Dimelo sharedInstance] presentRingCentralNotification:notification withCompletionHandler:completionHandler]) {
+        NSLog(@"This notification is not from RingCentral and should therefore be handled by your application");
+        completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge);
+    }
+}
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(nonnull UNNotificationResponse *)response withCompletionHandler:(nonnull void (^)(void))completionHandler {
+    if (![[Dimelo sharedInstance] consumeNotificationResponse:response]) {
+        NSLog(@"This notification is not from RingCentral and should therefore be handled by your application");
+    }
+
+    completionHandler();
+}
+
 // one of these will be called after calling -registerForRemoteNotifications
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
-{
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Register the device token.
     [Dimelo sharedInstance].deviceToken = deviceToken;
 }
 
-- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
-{
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     
 }
 
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
-{
-    //! If notification is from Dimelo, you don't have to handle anything
-    if ([[Dimelo sharedInstance] consumeReceivedRemoteNotification:userInfo])
-        { return; }
-    
-    //! Otherwise, here you app's handling of this notification.
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    if ([[Dimelo sharedInstance] consumeReceivedRemoteNotification:userInfo]) {
+        return;
+    }
+
+    NSLog(@"This remote notification is not from RingCentral and should therefore be handled by your application");
 }
 
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
-{
-    //! We simulate remote notification by putting its payload into a local notification.
-    if ([[Dimelo sharedInstance] consumeReceivedRemoteNotification:notification.userInfo])
-        { return; }
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    //! If the local notification is from RingCentral, you don't have to handle anything.
+    if ([[Dimelo sharedInstance] consumeReceivedRemoteNotification:notification.userInfo]) {
+        return;
+    }
     
-    //! You app's handling of this notification.
+    //! Otherwise, your application should handle the local notification.
+    NSLog(@"This local notification is not from RingCentral and should therefore be handled by your application");
 }
 
 - (void)application:(UIApplication*)application handleActionWithIdentifier:(nullable NSString*)identifier forRemoteNotification:(NSDictionary*)userInfo withResponseInfo:(NSDictionary*)responseInfo completionHandler:(void (^) ())completionHandler {
-
-    [[Dimelo sharedInstance] handleRemoteNotificationWithIdentifier: identifier responseInfo: responseInfo];
+    //! If the action has been performed in response to a RingCentral notification, you don't have to handle anything.
+    if (![[Dimelo sharedInstance] handleRemoteNotificationWithIdentifier: identifier responseInfo: responseInfo userInfo:userInfo]) {
+        //! Otherwise, your application should handle the action.
+        NSLog(@"This action hasn't been performed in response to a RingCentral notification and should therefore be handled by your application");
+    }
 
     if (completionHandler) {
-
         completionHandler();
     }
 }

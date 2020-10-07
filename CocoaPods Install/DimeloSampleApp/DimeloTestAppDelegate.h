@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <UserNotifications/UserNotifications.h>
 
-@interface DimeloTestAppDelegate : UIResponder <UIApplicationDelegate>
+@interface DimeloTestAppDelegate : UIResponder <UIApplicationDelegate, UNUserNotificationCenterDelegate>
 @property (strong, nonatomic) UIWindow *window;
 @end
