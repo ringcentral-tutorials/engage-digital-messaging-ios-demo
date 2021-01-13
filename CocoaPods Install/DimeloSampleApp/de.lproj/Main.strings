@@ -67,3 +67,6 @@
 
 /* Class = "UILabel"; text = "Thank you for updating to our new app. Here you can upgrade your plan and subscribe to our additional services."; ObjectID = "mxE-0B-meP"; */
 "mxE-0B-meP.text" = "Vielen Dank für die Aktualisierung unserer neuen App. Hier können Sie Ihren Plan aktualisieren und unsere Zusatzleistungen abonnieren.";
+"0ve-jG-lCM.text" = "Choose a user identifier:";
+"hFT-4R-PCk.normalTitle" = "Update the user identifier";
+"7n0-RY-QZl.normalTitle" = "Update";

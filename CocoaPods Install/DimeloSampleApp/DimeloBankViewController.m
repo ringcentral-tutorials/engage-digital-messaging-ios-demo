@@ -82,6 +82,8 @@
         _dimelo.dateTextColor = [UIColor colorWithWhite:1.0 alpha:0.7f];
     }
 
+    _dimelo.userIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey: @"rc_user_id"];
+
     self.tabBarController.tabBar.tintColor = self.view.backgroundColor;
 }
 

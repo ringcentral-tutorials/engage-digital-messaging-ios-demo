@@ -1,4 +1,4 @@
 target "Dimelo CocoaPods Sample" do
-  pod 'Dimelo-iOS', :git => 'https://github.com/dimelo/Dimelo-iOS', :tag => 'v2.1.1'
+  pod 'Dimelo-iOS', :git => 'https://github.com/dimelo/Dimelo-iOS', :tag => 'v2.2.0'
   pod 'Bugsnag'
 end

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="ER7-ru-gwt">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="ER7-ru-gwt">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,13 +21,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZs-UD-G0E">
-                                <rect key="frame" x="0.0" y="50" width="375" height="473"/>
+                                <rect key="frame" x="0.0" y="30" width="375" height="493"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nej-wM-X2P">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="473"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="515"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4b-W3-nHd">
-                                                <rect key="frame" x="147.5" y="248" width="80" height="33"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4b-W3-nHd">
+                                                <rect key="frame" x="147.5" y="290" width="80" height="33"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Open Chat">
                                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -38,28 +37,28 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Dimelo Test App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="209" translatesAutoresizingMaskIntoConstraints="NO" id="lbb-Fa-BVE">
-                                                <rect key="frame" x="83" y="20" width="209" height="57"/>
+                                                <rect key="frame" x="83.5" y="20" width="208.5" height="57"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" systemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="FOp-2e-X0f">
-                                                <rect key="frame" x="20" y="102" width="335" height="121"/>
+                                                <rect key="frame" x="20" y="102" width="335" height="120.5"/>
                                                 <string key="text">Here you can test chat UI in different context: modal and tabbar.
 
 Tap the button below to open a modal chat. Select another tab to open a chat in the tab view.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" systemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="K8B-Cd-Tca">
-                                                <rect key="frame" x="229.5" y="248" width="9" height="20"/>
+                                                <rect key="frame" x="229.5" y="290" width="9" height="20"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                                 <color key="textColor" red="0.98776078224182129" green="0.28528562188148499" blue="0.029896024614572525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIJ-qp-bpZ">
-                                                <rect key="frame" x="124.5" y="291" width="126" height="33"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIJ-qp-bpZ">
+                                                <rect key="frame" x="124.5" y="333" width="126" height="33"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="full_screen"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Open Full Screen">
@@ -69,8 +68,8 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                                                     <action selector="openChatFullScreen:" destination="x5A-6p-PRh" eventType="touchUpInside" id="WSx-qL-zbh"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hj-0M-gNk">
-                                                <rect key="frame" x="134.5" y="334" width="107" height="33"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hj-0M-gNk">
+                                                <rect key="frame" x="134" y="376" width="107" height="33"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Open Popover">
                                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,8 +78,8 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                                                     <action selector="openChatPopover:" destination="x5A-6p-PRh" eventType="touchUpInside" id="bE5-Ye-4BK"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yi3-hi-Yoy">
-                                                <rect key="frame" x="90.5" y="377" width="194" height="33"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yi3-hi-Yoy">
+                                                <rect key="frame" x="90" y="419" width="194" height="33"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="simulate_push"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Simulate Short Notification">
@@ -90,8 +89,8 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                                                     <action selector="sendShortMessage:" destination="x5A-6p-PRh" eventType="touchUpInside" id="N0c-xP-iyW"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vZ-BT-hns">
-                                                <rect key="frame" x="84.5" y="420" width="206" height="33"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vZ-BT-hns">
+                                                <rect key="frame" x="84.5" y="462" width="206" height="33"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Simulate Longer Notification">
                                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -100,20 +99,29 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                                                     <action selector="sendLongMessage:" destination="x5A-6p-PRh" eventType="touchUpInside" id="2Fk-vU-ssg"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFT-4R-PCk">
+                                                <rect key="frame" x="100" y="250" width="175" height="30"/>
+                                                <state key="normal" title="Update the user identifier"/>
+                                                <connections>
+                                                    <segue destination="f7b-w1-wTz" kind="modal" modalPresentationStyle="fullScreen" id="X21-qg-3Q0"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Yi3-hi-Yoy" firstAttribute="centerX" secondItem="1vZ-BT-hns" secondAttribute="centerX" constant="-0.5" id="4gk-kR-lTq"/>
                                             <constraint firstItem="Yi3-hi-Yoy" firstAttribute="top" secondItem="8hj-0M-gNk" secondAttribute="bottom" constant="10" id="4lt-DK-a3z"/>
                                             <constraint firstItem="FOp-2e-X0f" firstAttribute="leading" secondItem="Nej-wM-X2P" secondAttribute="leading" constant="20" id="5nL-3C-wx6"/>
-                                            <constraint firstItem="a4b-W3-nHd" firstAttribute="top" secondItem="FOp-2e-X0f" secondAttribute="bottom" constant="25" id="7GS-mS-Cwo"/>
                                             <constraint firstItem="a4b-W3-nHd" firstAttribute="centerX" secondItem="CIJ-qp-bpZ" secondAttribute="centerX" id="7gt-Tw-a3p"/>
                                             <constraint firstAttribute="centerX" secondItem="FOp-2e-X0f" secondAttribute="centerX" id="A7R-55-lJY"/>
+                                            <constraint firstItem="hFT-4R-PCk" firstAttribute="centerX" secondItem="Nej-wM-X2P" secondAttribute="centerX" id="C0J-Pb-YK1"/>
                                             <constraint firstAttribute="centerX" secondItem="lbb-Fa-BVE" secondAttribute="centerX" id="COV-gu-wZH"/>
                                             <constraint firstItem="K8B-Cd-Tca" firstAttribute="leading" secondItem="a4b-W3-nHd" secondAttribute="trailing" constant="2" id="EoO-aA-0Y5"/>
                                             <constraint firstItem="1vZ-BT-hns" firstAttribute="top" secondItem="Yi3-hi-Yoy" secondAttribute="bottom" constant="10" id="Epw-59-t9k"/>
                                             <constraint firstItem="lbb-Fa-BVE" firstAttribute="top" secondItem="Nej-wM-X2P" secondAttribute="top" constant="20" id="McP-cy-muW"/>
                                             <constraint firstItem="8hj-0M-gNk" firstAttribute="top" secondItem="CIJ-qp-bpZ" secondAttribute="bottom" constant="10" id="PMh-ab-Z7Q"/>
+                                            <constraint firstItem="hFT-4R-PCk" firstAttribute="top" secondItem="FOp-2e-X0f" secondAttribute="bottom" constant="27.5" id="VXj-00-mox"/>
+                                            <constraint firstItem="a4b-W3-nHd" firstAttribute="top" secondItem="hFT-4R-PCk" secondAttribute="bottom" constant="10" id="Y3L-jh-oa1"/>
                                             <constraint firstItem="FOp-2e-X0f" firstAttribute="top" secondItem="lbb-Fa-BVE" secondAttribute="bottom" constant="25" id="eR4-qw-6UC"/>
                                             <constraint firstItem="CIJ-qp-bpZ" firstAttribute="top" secondItem="a4b-W3-nHd" secondAttribute="bottom" constant="10" id="gGx-VB-XeU"/>
                                             <constraint firstItem="a4b-W3-nHd" firstAttribute="top" secondItem="K8B-Cd-Tca" secondAttribute="bottom" constant="-20" id="hbu-6K-APV"/>
@@ -152,7 +160,82 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036.5" y="239"/>
+            <point key="canvasLocation" x="1502.1739130434785" y="160.04464285714286"/>
+        </scene>
+        <!--User Identifier View Controller-->
+        <scene sceneID="9Yt-zH-85f">
+            <objects>
+                <viewController storyboardIdentifier="loginViewController" id="f7b-w1-wTz" customClass="RCUserIdentifierViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ktX-s2-iKr"/>
+                        <viewControllerLayoutGuide type="bottom" id="uMN-md-LsW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eSY-4W-pPC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQA-Ff-Znq">
+                                <rect key="frame" x="62.5" y="296.5" width="250" height="74"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7n0-RY-QZl">
+                                        <rect key="frame" x="99.5" y="47" width="51" height="30"/>
+                                        <state key="normal" title="Update"/>
+                                        <connections>
+                                            <action selector="startAction:" destination="f7b-w1-wTz" eventType="touchUpInside" id="jZ6-1G-JmP"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a user identifier:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ve-jG-lCM">
+                                        <rect key="frame" x="0.0" y="-30" width="250" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ADE-3i-k46">
+                                        <rect key="frame" x="0.0" y="3" width="250" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="PQU-gK-DrN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="7n0-RY-QZl" secondAttribute="bottom" constant="-3" id="739-nD-5dm"/>
+                                    <constraint firstAttribute="trailing" secondItem="ADE-3i-k46" secondAttribute="trailing" id="9EI-Lr-d41"/>
+                                    <constraint firstItem="7n0-RY-QZl" firstAttribute="top" secondItem="ADE-3i-k46" secondAttribute="bottom" constant="10" id="Ap7-mG-QYT"/>
+                                    <constraint firstItem="ADE-3i-k46" firstAttribute="leading" secondItem="cQA-Ff-Znq" secondAttribute="leading" id="Lyr-Hh-Orb"/>
+                                    <constraint firstItem="ADE-3i-k46" firstAttribute="top" secondItem="cQA-Ff-Znq" secondAttribute="top" constant="3" id="bnR-0h-3r5"/>
+                                    <constraint firstAttribute="trailing" secondItem="0ve-jG-lCM" secondAttribute="trailing" id="fIH-lE-aiD"/>
+                                    <constraint firstItem="0ve-jG-lCM" firstAttribute="leading" secondItem="cQA-Ff-Znq" secondAttribute="leading" id="lUW-Vs-7fz"/>
+                                    <constraint firstItem="ADE-3i-k46" firstAttribute="top" secondItem="0ve-jG-lCM" secondAttribute="bottom" constant="12" id="ruX-7g-Ro1"/>
+                                    <constraint firstItem="7n0-RY-QZl" firstAttribute="centerX" secondItem="cQA-Ff-Znq" secondAttribute="centerX" id="tNZ-3e-dd4"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lam-xb-7ti">
+                                <rect key="frame" x="329" y="20" width="30" height="30"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="f7b-w1-wTz" eventType="touchUpInside" id="2c8-PB-vI0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lam-xb-7ti" firstAttribute="top" secondItem="ktX-s2-iKr" secondAttribute="bottom" constant="20" id="0Fd-Te-bQ0"/>
+                            <constraint firstItem="cQA-Ff-Znq" firstAttribute="centerY" secondItem="eSY-4W-pPC" secondAttribute="centerY" id="8h8-f0-9Tp"/>
+                            <constraint firstItem="cQA-Ff-Znq" firstAttribute="centerX" secondItem="eSY-4W-pPC" secondAttribute="centerX" id="bZs-Hy-ejO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lam-xb-7ti" secondAttribute="trailing" id="go5-v0-9VY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="w37-is-w2j"/>
+                    <connections>
+                        <outlet property="userIdEditText" destination="ADE-3i-k46" id="1D2-sa-lfV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Jh-ns-lqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109.59999999999999" y="132.68365817091455"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="63y-UL-wuC">
@@ -172,7 +255,7 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tPE-uE-4cV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="628" y="240"/>
+            <point key="canvasLocation" x="910.14492753623199" y="160.71428571428569"/>
         </scene>
         <!--Item-->
         <scene sceneID="MZW-qj-zZu">
@@ -225,7 +308,7 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                                 </state>
                             </button>
                             <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGM-gg-xai">
-                                <rect key="frame" x="67.5" y="296" width="240" height="41"/>
+                                <rect key="frame" x="67.5" y="295.5" width="240" height="41"/>
                                 <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="0.17000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
                                 <state key="normal" title="Funds Transfer">
@@ -233,7 +316,7 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                                 </state>
                             </button>
                             <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3b9-4D-3rK">
-                                <rect key="frame" x="67.5" y="353" width="240" height="41"/>
+                                <rect key="frame" x="67.5" y="352.5" width="240" height="41"/>
                                 <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="0.17000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
                                 <state key="normal" title="BTC Exchange">
@@ -241,7 +324,7 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                                 </state>
                             </button>
                             <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcV-iH-sI4">
-                                <rect key="frame" x="67.5" y="410" width="240" height="41"/>
+                                <rect key="frame" x="67.5" y="409.5" width="240" height="41"/>
                                 <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="0.17000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
                                 <state key="normal" title="Live Support">
@@ -275,7 +358,7 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fb6-1U-ABb" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1436.5" y="239.5"/>
+            <point key="canvasLocation" x="2081.8840579710145" y="160.37946428571428"/>
         </scene>
         <!--Item-->
         <scene sceneID="Bsx-4r-ZxL">
@@ -290,7 +373,7 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyTelecom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="P6c-UG-q9L">
-                                <rect key="frame" x="40" y="64" width="295" height="70"/>
+                                <rect key="frame" x="40" y="44" width="295" height="70"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBoldItalic" family="Avenir Next Condensed" pointSize="50"/>
                                 <color key="textColor" red="0.95238560438156128" green="0.43580731749534607" blue="0.03088996559381485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -299,13 +382,13 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for updating to our new app. Here you can upgrade your plan and subscribe to our additional services." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="mxE-0B-meP">
-                                <rect key="frame" x="20" y="144" width="335" height="69"/>
+                                <rect key="frame" x="20" y="124" width="335" height="68.5"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23C-6a-fqq">
-                                <rect key="frame" x="67.5" y="253" width="240" height="41"/>
+                                <rect key="frame" x="67.5" y="232.5" width="240" height="41"/>
                                 <color key="backgroundColor" red="0.97584152221679688" green="0.50242370367050171" blue="0.14413927495479584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="A8W-zP-aQF"/>
@@ -318,7 +401,7 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                                 </state>
                             </button>
                             <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8U-N1-Ngb">
-                                <rect key="frame" x="67.5" y="311" width="240" height="41"/>
+                                <rect key="frame" x="67.5" y="290" width="240" height="41"/>
                                 <color key="backgroundColor" red="0.97584152221679688" green="0.50242370367050171" blue="0.14413927495479584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
                                 <state key="normal" title="Upgrade your iPhone">
@@ -326,7 +409,7 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                                 </state>
                             </button>
                             <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qm-Au-vkq">
-                                <rect key="frame" x="67.5" y="368" width="240" height="41"/>
+                                <rect key="frame" x="67.5" y="347" width="240" height="41"/>
                                 <color key="backgroundColor" red="0.97584152221679688" green="0.50242370367050171" blue="0.14413927495479584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
                                 <state key="normal" title="Bonus Features">
@@ -334,7 +417,7 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                                 </state>
                             </button>
                             <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnm-4p-QZg">
-                                <rect key="frame" x="67.5" y="425" width="240" height="41"/>
+                                <rect key="frame" x="67.5" y="404" width="240" height="41"/>
                                 <color key="backgroundColor" red="0.97584152221679688" green="0.50242370367050171" blue="0.14413927495479584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
                                 <state key="normal" title="Online Support">
@@ -374,12 +457,15 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhZ-Fw-2W9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="240"/>
+            <point key="canvasLocation" x="2656.521739130435" y="160.71428571428569"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

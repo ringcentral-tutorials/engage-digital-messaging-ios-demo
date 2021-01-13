@@ -9,7 +9,7 @@
 #import "DimeloTestAppDelegate.h"
 #import "Dimelo/Dimelo.h"
 
-@interface DimeloTestAppDelegate () <DimeloDelegate, UIPopoverControllerDelegate>
+@interface DimeloTestAppDelegate () <DimeloDelegate, UIPopoverControllerDelegate, UITabBarControllerDelegate>
 @property(nonatomic, readonly) UITabBarController* tabBarController;
 @property(nonatomic) UIViewController* tabChatVC;
 @property(nonatomic) UIPopoverController* popoverController;
@@ -28,6 +28,8 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.tabBarController.delegate = self;
+
     Dimelo* dimelo = [Dimelo sharedInstance];
 
     //! By default, Dimelo is initialized with apiSecret and domainName field of DimeloConfig.plist
@@ -47,8 +49,8 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
         if (apiSecret && apiSecret.length > 0) {
             [dimelo initializeWithApiSecretAndHostName: apiSecret hostName: @"domain-test.messaging.dimelo.info" delegate: nil];
         }
-    } else {
-        dimelo.userIdentifier = @"U-1000555777";
+    } else if ([[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"]) {
+        dimelo.userIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"];
     }
     dimelo.authenticationInfo = @{@"bankBranch": @"Test-1234" };
 
@@ -411,4 +413,16 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     self.unreadUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:self.unreadFetchInterval target:self selector:@selector(updateUnreadCount) userInfo:nil repeats:NO];
 }
 
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    NSMutableArray *viewControllers = [[NSMutableArray alloc] initWithArray:tabBarController.viewControllers];
+
+    if (tabBarController.selectedIndex == 3) {
+        Dimelo.sharedInstance.userIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"];
+        self.tabChatVC = [Dimelo.sharedInstance chatViewController];
+        self.tabChatVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Support", @"Test App") image:[UIImage imageNamed: @"Support"] selectedImage:[UIImage imageNamed:@"SupportSelected"]];
+        [viewControllers replaceObjectAtIndex:3 withObject:self.tabChatVC];
+
+        tabBarController.viewControllers = viewControllers;
+    }
+}
 @end
