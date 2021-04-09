@@ -27,7 +27,7 @@
 "F8U-N1-Ngb.normalTitle" = "Améliorez votre iPhone";
 
 /* Class = "UILabel"; text = "Here you can test chat UI in different context: modal and tabbar.\n\nTap the button below to open a modal chat. Select another tab to open a chat in the tab view."; ObjectID = "FOp-2e-X0f"; */
-"FOp-2e-X0f.text" = "Ici, vous pouvez tester l'interface utilisateur de chat dans un contexte différent: modal et tabbarie.\n\n Appuyez sur le bouton ci-dessous pour ouvrir un chat modal. Sélectionnez un autre onglet pour ouvrir un chat dans la vue des onglets.";
+"FOp-2e-X0f.text" = "Ici, vous pouvez tester l'interface utilisateur de chat dans des contextes différents : modal et tabbar.\n\n Appuyez sur le bouton ci-dessous pour ouvrir un chat modal. Sélectionnez un autre onglet pour ouvrir un chat dans la vue des onglets.";
 
 /* Class = "UIButton"; normalTitle = "Funds Transfer"; ObjectID = "IGM-gg-xai"; */
 "IGM-gg-xai.normalTitle" = "Transfert de fonds";
@@ -68,5 +68,6 @@
 /* Class = "UILabel"; text = "Thank you for updating to our new app. Here you can upgrade your plan and subscribe to our additional services."; ObjectID = "mxE-0B-meP"; */
 "mxE-0B-meP.text" = "Nous vous remercions de votre mise à jour pour notre nouvelle application. Ici, vous pouvez mettre à niveau votre plan et vous inscrire à nos services supplémentaires.";
 "0ve-jG-lCM.text" = "Choisissez un identifiant:";
-"hFT-4R-PCk.normalTitle" = "Modifier l'identifiant";
+"7eh-5x-qWd.normalTitle" = "Modifier la configuration";
 "7n0-RY-QZl.normalTitle" = "Modifier";
+"Kmz-WV-Kdv.text" = "Activer les fils de discussion :";

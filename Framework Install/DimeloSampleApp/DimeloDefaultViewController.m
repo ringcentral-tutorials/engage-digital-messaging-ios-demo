@@ -36,6 +36,7 @@
 {
     [super viewDidAppear:animated];
 
+    Dimelo.sharedInstance.embeddedAsFragment = NO;
     self.tabBarController.tabBar.tintColor = self.view.tintColor;
 }
 

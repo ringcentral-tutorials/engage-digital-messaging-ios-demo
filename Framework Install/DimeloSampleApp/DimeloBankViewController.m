@@ -43,6 +43,7 @@
     {
         _dimelo = [[Dimelo sharedInstance] copy];
         _dimelo.delegate = self;
+        _dimelo.enableThreads = [[NSUserDefaults standardUserDefaults] boolForKey:@"rc_enable_threads"];
         _dimelo.title = @"Local Bank Live Support";
         _dimelo.tintColor = self.view.backgroundColor;
         _dimelo.backgroundView.backgroundColor = self.view.backgroundColor;
@@ -84,7 +85,7 @@
 
     _dimelo.userIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey: @"rc_user_id"];
 
-    self.tabBarController.tabBar.tintColor = self.view.backgroundColor;
+    self.tabBarController.tabBar.tintColor = self.view.tintColor;
 }
 
 - (void) openChat:(id)sender

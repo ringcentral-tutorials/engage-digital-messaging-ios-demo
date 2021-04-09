@@ -8,10 +8,12 @@
 
 #import "DimeloTestAppDelegate.h"
 #import "Dimelo/Dimelo.h"
+#import "DimeloNavigationController.h"
+#import "DimeloTelcoViewController.h"
 
 @interface DimeloTestAppDelegate () <DimeloDelegate, UIPopoverControllerDelegate, UITabBarControllerDelegate>
-@property(nonatomic, readonly) UITabBarController* tabBarController;
-@property(nonatomic) UIViewController* tabChatVC;
+@property(nonatomic, readonly) UITabBarController *tabBarController;
+@property(nonatomic) UIViewController *tabChatVC;
 @property(nonatomic) UIPopoverController* popoverController;
 
 @property(nonatomic) NSTimeInterval unreadFetchInterval;
@@ -29,7 +31,6 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.tabBarController.delegate = self;
-
     Dimelo* dimelo = [Dimelo sharedInstance];
 
     //! By default, Dimelo is initialized with apiSecret and domainName field of DimeloConfig.plist
@@ -52,11 +53,17 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     } else if ([[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"]) {
         dimelo.userIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"];
     }
-    dimelo.authenticationInfo = @{@"bankBranch": @"Test-1234" };
+
+    dimelo.enableThreads = [[NSUserDefaults standardUserDefaults] boolForKey:@"rc_enable_threads"];
+    dimelo.authenticationInfo = @{@"bankBranch": @"Test-1234"};
+    dimelo.messageContextInfo = @{@"extra": @"1234"};
 
     //! Initialize dimelo Chat ViewController
     self.tabChatVC = [dimelo chatViewController];
     self.tabChatVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Support", @"Test App") image:[UIImage imageNamed:@"Support"] selectedImage:[UIImage imageNamed:@"SupportSelected"]];
+
+    // set the telecom tabBar item title
+    self.tabBarController.tabBar.items[2].title = @"Telecom";
 
     //! Initialize tabbar controller
     [self.tabBarController addChildViewController:self.tabChatVC];
@@ -154,30 +161,48 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     }
 }
 
-
-
-
-
-
-
-
-
 #pragma mark - <DimeloDelegate>
 
 - (void) dimeloDisplayChatViewController:(Dimelo*)dimelo
 {
     UIViewController* vc = [dimelo chatViewController];
-    
     vc.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(closeChat:)];
-    
-    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
-    {
+    ((UINavigationController *)vc).topViewController.navigationItem.rightBarButtonItem = vc.navigationItem.rightBarButtonItem;
+
+    if (dimelo.embeddedAsFragment && dimelo.openedFromNotification) {
+        vc.modalPresentationStyle = UIModalPresentationFullScreen;
+    } else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         vc.modalPresentationStyle = UIModalPresentationFormSheet;
     }
     
-    [self.tabBarController presentViewController:vc animated:YES completion:^{
+    if ([[self topViewController] isKindOfClass:[DimeloNavigationController class]]) {
+        [[self topViewController] dismissViewControllerAnimated:NO completion:nil];
+    }
+
+    UIViewController *presentationVC = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+
+    [presentationVC presentViewController:vc animated:YES completion:^{
        // presented.
     }];
+}
+
+- (UIViewController *)topViewController {
+    return [self topViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
+}
+
+- (UIViewController *)topViewController:(UIViewController *)rootViewController {
+    if (rootViewController.presentedViewController == nil) {
+        return rootViewController;
+    }
+
+    if ([rootViewController.presentedViewController isMemberOfClass:[UINavigationController class]]) {
+        UINavigationController *navigationController = (UINavigationController *)rootViewController.presentedViewController;
+        UIViewController *lastViewController = [[navigationController viewControllers] lastObject];
+        return [self topViewController:lastViewController];
+    }
+
+    UIViewController *presentedViewController = rootViewController.presentedViewController;
+    return [self topViewController:presentedViewController];
 }
 
 - (void) dimeloUnreadCountDidChange:(NSNotification *)notification
@@ -416,12 +441,15 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
     NSMutableArray *viewControllers = [[NSMutableArray alloc] initWithArray:tabBarController.viewControllers];
 
-    if (tabBarController.selectedIndex == 3) {
+    if (tabBarController.selectedIndex == 2) {
+        UINavigationController *dimeloTelcoNavigationController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"dimeloTelcoNavigationController"];
+        [viewControllers replaceObjectAtIndex:2 withObject:dimeloTelcoNavigationController];
+        tabBarController.viewControllers = viewControllers;
+    } else if (tabBarController.selectedIndex == 3) {
         Dimelo.sharedInstance.userIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"];
         self.tabChatVC = [Dimelo.sharedInstance chatViewController];
         self.tabChatVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Support", @"Test App") image:[UIImage imageNamed: @"Support"] selectedImage:[UIImage imageNamed:@"SupportSelected"]];
         [viewControllers replaceObjectAtIndex:3 withObject:self.tabChatVC];
-
         tabBarController.viewControllers = viewControllers;
     }
 }

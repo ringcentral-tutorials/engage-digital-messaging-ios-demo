@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DimeloTelcoViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UIView *container;
 @end
