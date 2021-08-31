@@ -216,12 +216,16 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 // Dimelo guarantees that dimeloDidEndNetworkActivity is always eventually called after dimeloDidBeginNetworkActivity (whether fails with error or without).
 - (void) dimeloDidBeginNetworkActivity:(Dimelo*)dimelo
 {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    });
 }
 
 - (void) dimeloDidEndNetworkActivity:(Dimelo*)dimelo
 {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    });
 }
 
 
@@ -410,32 +414,35 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 {
     [self.unreadUpdateTimer invalidate];
     [[Dimelo sharedInstance] fetchUnreadCountWithCompletionHandler:^(NSInteger unreadCount, NSError *error) {
-        if (unreadCount == NSNotFound)
-        {
-            NSLog(@"error while updating unreadCount : %@", error);
-            if (error.domain == DimeloHTTPErrorDomain && error.code == 429)
-            {
-                // 429 Too many requests. Be nice, add some delay.
-                self.unreadFetchInterval += defaultUnreadFetchInterval;
+            if (unreadCount == NSNotFound) {
+                NSLog(@"error while updating unreadCount : %@", error);
+
+                if (error.domain == DimeloHTTPErrorDomain && error.code == 429) {
+                    // 429 Too many requests. Be nice, add some delay.
+                    self.unreadFetchInterval += defaultUnreadFetchInterval;
+                }
+            } else {
+                [self updateBadgeWithUnreadCount:unreadCount];
             }
-        }
-        else
-        {
-            [self updateBadgeWithUnreadCount:unreadCount];
-        }
-        [self scheduleUnreadCountUpdateTimer];
+
+        //I do some stuff which has async callbacks to the appDelegate or any other class (very common)
+            [self scheduleUnreadCountUpdateTimer];
     }];
 }
 
 - (void)updateBadgeWithUnreadCount:(NSInteger)count
 {
-    self.tabChatVC.tabBarItem.badgeValue = count > 0 ? @(count).stringValue : nil;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.tabChatVC.tabBarItem.badgeValue = count > 0 ? @(count).stringValue : nil;
+    });
 }
 
 - (void)scheduleUnreadCountUpdateTimer
 {
-    [self.unreadUpdateTimer invalidate];
-    self.unreadUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:self.unreadFetchInterval target:self selector:@selector(updateUnreadCount) userInfo:nil repeats:NO];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.unreadUpdateTimer invalidate];
+        self.unreadUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:self.unreadFetchInterval target:self selector:@selector(updateUnreadCount) userInfo:nil repeats:NO];
+    });
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
