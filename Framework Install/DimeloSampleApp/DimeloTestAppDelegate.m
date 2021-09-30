@@ -8,8 +8,8 @@
 
 #import "DimeloTestAppDelegate.h"
 #import "Dimelo/Dimelo.h"
-#import "DimeloNavigationController.h"
 #import "DimeloTelcoViewController.h"
+#import "RcSourceModel.h"
 
 @interface DimeloTestAppDelegate () <DimeloDelegate, UIPopoverControllerDelegate, UITabBarControllerDelegate>
 @property(nonatomic, readonly) UITabBarController *tabBarController;
@@ -28,15 +28,28 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 
 #pragma mark - <UIApplicationDelegate>
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.tabBarController.delegate = self;
-    Dimelo* dimelo = [Dimelo sharedInstance];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSData* storedEncodedObject = [defaults objectForKey:@"rc_selected_source"];
+    RcSourceModel* selectedSource = [NSKeyedUnarchiver unarchiveObjectWithData:storedEncodedObject];
 
-    //! By default, Dimelo is initialized with apiSecret and domainName field of DimeloConfig.plist
-    //! But you can override this configuration within the code as follow:
-    //! [dimelo initWithApiSecret: @"YOUR_API_SECRET" domainName:@"YOUR_DOMAIN_NAME" delegate: DELEGATE];
-    dimelo.delegate = self;
+    if (!selectedSource) {
+        NSArray* jsonDict = [DimeloTestAppDelegate JSONFromFile];
+
+        if (jsonDict) {
+            selectedSource = [[RcSourceModel alloc] initWithText:[jsonDict[0] objectForKey:@"name"] descript:[jsonDict[0]  objectForKey:@"description"] domainName:[jsonDict[0]  objectForKey:@"domainName"] apiSecret:[jsonDict[0]  objectForKey:@"apiSecret"] hostname:[jsonDict[0]  objectForKey:@"hostname"]];
+        }
+    }
+
+    self.tabBarController.delegate = self;
+
+    Dimelo* dimelo;
+
+    if (selectedSource.hostname && selectedSource.hostname.length > 0) {
+        dimelo = [[Dimelo sharedInstance] initializeWithApiSecretAndHostName:selectedSource.apiSecret hostName:[selectedSource.domainName stringByAppendingString:selectedSource.hostname] delegate:self];
+    } else {
+        dimelo = [[Dimelo sharedInstance] initWithApiSecret:selectedSource.apiSecret domainName:selectedSource.domainName delegate:self];
+    }
 
     #warning Switch this off when using a distribution provisioning profil
     dimelo.developmentAPNS = YES;
@@ -174,8 +187,8 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     } else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         vc.modalPresentationStyle = UIModalPresentationFormSheet;
     }
-    
-    if ([[self topViewController] isKindOfClass:[DimeloNavigationController class]]) {
+
+    if ([NSStringFromClass([[self topViewController] class]) isEqual:@"DimeloNavigationController"]) {
         [[self topViewController] dismissViewControllerAnimated:NO completion:nil];
     }
 
@@ -459,5 +472,11 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
         [viewControllers replaceObjectAtIndex:3 withObject:self.tabChatVC];
         tabBarController.viewControllers = viewControllers;
     }
+}
+
++ (NSArray *)JSONFromFile {
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"RcConfigSource" ofType:@"json"];
+    NSData* data = [NSData dataWithContentsOfFile:path];
+    return [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
 }
 @end

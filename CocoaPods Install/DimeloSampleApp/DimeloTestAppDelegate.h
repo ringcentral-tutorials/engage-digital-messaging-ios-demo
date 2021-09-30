@@ -11,4 +11,5 @@
 
 @interface DimeloTestAppDelegate : UIResponder <UIApplicationDelegate, UNUserNotificationCenterDelegate>
 @property (strong, nonatomic) UIWindow *window;
++ (NSArray *)JSONFromFile;
 @end

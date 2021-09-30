@@ -17,12 +17,15 @@
 		2072793919CC2F0500C40976 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072793519CC2EDE00C40976 /* MobileCoreServices.framework */; };
 		2072793B19CC2FC400C40976 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2072793A19CC2FC400C40976 /* Accelerate.framework */; };
 		20E4674D19D00ED4009EC7AF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 20E4674C19D00ED4009EC7AF /* Podfile */; };
-		585AC0D91DEC8EEB00DE3DAC /* DimeloConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585AC0D81DEC8EEB00DE3DAC /* DimeloConfig.plist */; };
 		58AC34A41DEC872F003D1911 /* DimeloBankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AC349A1DEC872F003D1911 /* DimeloBankViewController.m */; };
 		58AC34A61DEC872F003D1911 /* DimeloDefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AC349D1DEC872F003D1911 /* DimeloDefaultViewController.m */; };
 		58AC34A71DEC872F003D1911 /* DimeloTelcoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AC349F1DEC872F003D1911 /* DimeloTelcoViewController.m */; };
 		58AC34A81DEC872F003D1911 /* DimeloTestApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58AC34A01DEC872F003D1911 /* DimeloTestApp-Info.plist */; };
 		58AC34A91DEC872F003D1911 /* DimeloTestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AC34A31DEC872F003D1911 /* DimeloTestAppDelegate.m */; };
+		8378EA5E2705DB7C00A363B3 /* RCConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8378EA582705DB7C00A363B3 /* RCConfigurationViewController.m */; };
+		8378EA5F2705DB7C00A363B3 /* RcConfigSource.json in Resources */ = {isa = PBXBuildFile; fileRef = 8378EA5A2705DB7C00A363B3 /* RcConfigSource.json */; };
+		8378EA602705DB7C00A363B3 /* RcSourceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8378EA5B2705DB7C00A363B3 /* RcSourceTableViewCell.m */; };
+		8378EA612705DB7C00A363B3 /* RcSourceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8378EA5C2705DB7C00A363B3 /* RcSourceModel.m */; };
 		8E4DAC7ADDADACE8DBB4950A /* libPods-Dimelo CocoaPods Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 707076F860D59DECD5B2E818 /* libPods-Dimelo CocoaPods Sample.a */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +44,6 @@
 		2072793519CC2EDE00C40976 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2072793A19CC2FC400C40976 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		20E4674C19D00ED4009EC7AF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		585AC0D81DEC8EEB00DE3DAC /* DimeloConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DimeloConfig.plist; sourceTree = "<group>"; };
 		58AC34991DEC872F003D1911 /* DimeloBankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimeloBankViewController.h; sourceTree = "<group>"; };
 		58AC349A1DEC872F003D1911 /* DimeloBankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DimeloBankViewController.m; sourceTree = "<group>"; };
 		58AC349C1DEC872F003D1911 /* DimeloDefaultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimeloDefaultViewController.h; sourceTree = "<group>"; };
@@ -54,6 +56,13 @@
 		58AC34A31DEC872F003D1911 /* DimeloTestAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DimeloTestAppDelegate.m; sourceTree = "<group>"; };
 		707076F860D59DECD5B2E818 /* libPods-Dimelo CocoaPods Sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dimelo CocoaPods Sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8330F17B1F45A4B100F266CE /* Dimelo CocoaPods Sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Dimelo CocoaPods Sample.entitlements"; sourceTree = "<group>"; };
+		8378EA572705DB7C00A363B3 /* RcSourceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RcSourceTableViewCell.h; sourceTree = "<group>"; };
+		8378EA582705DB7C00A363B3 /* RCConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCConfigurationViewController.m; sourceTree = "<group>"; };
+		8378EA592705DB7C00A363B3 /* RcSourceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RcSourceModel.h; sourceTree = "<group>"; };
+		8378EA5A2705DB7C00A363B3 /* RcConfigSource.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RcConfigSource.json; sourceTree = "<group>"; };
+		8378EA5B2705DB7C00A363B3 /* RcSourceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RcSourceTableViewCell.m; sourceTree = "<group>"; };
+		8378EA5C2705DB7C00A363B3 /* RcSourceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RcSourceModel.m; sourceTree = "<group>"; };
+		8378EA5D2705DB7C00A363B3 /* RCConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCConfigurationViewController.h; sourceTree = "<group>"; };
 		D44608FA7D945594575ABD7A /* Pods-Dimelo CocoaPods Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dimelo CocoaPods Sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dimelo CocoaPods Sample/Pods-Dimelo CocoaPods Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		FCB71CCDAFC8135AC4E2D4DE /* Pods-Dimelo CocoaPods Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dimelo CocoaPods Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dimelo CocoaPods Sample/Pods-Dimelo CocoaPods Sample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,7 +105,6 @@
 		207278EC19CC29A100C40976 /* Dimelo Sample App */ = {
 			isa = PBXGroup;
 			children = (
-				585AC0D81DEC8EEB00DE3DAC /* DimeloConfig.plist */,
 				58AC34991DEC872F003D1911 /* DimeloBankViewController.h */,
 				58AC349A1DEC872F003D1911 /* DimeloBankViewController.m */,
 				58AC349C1DEC872F003D1911 /* DimeloDefaultViewController.h */,
@@ -107,6 +115,13 @@
 				58AC34A11DEC872F003D1911 /* DimeloTestApp-Prefix.pch */,
 				58AC34A21DEC872F003D1911 /* DimeloTestAppDelegate.h */,
 				58AC34A31DEC872F003D1911 /* DimeloTestAppDelegate.m */,
+				8378EA5A2705DB7C00A363B3 /* RcConfigSource.json */,
+				8378EA5D2705DB7C00A363B3 /* RCConfigurationViewController.h */,
+				8378EA582705DB7C00A363B3 /* RCConfigurationViewController.m */,
+				8378EA592705DB7C00A363B3 /* RcSourceModel.h */,
+				8378EA5C2705DB7C00A363B3 /* RcSourceModel.m */,
+				8378EA572705DB7C00A363B3 /* RcSourceTableViewCell.h */,
+				8378EA5B2705DB7C00A363B3 /* RcSourceTableViewCell.m */,
 				207278F119CC29A100C40976 /* AppDelegate.h */,
 				207278F219CC29A100C40976 /* AppDelegate.m */,
 				207278F419CC29A100C40976 /* ViewController.h */,
@@ -197,6 +212,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -215,10 +231,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				585AC0D91DEC8EEB00DE3DAC /* DimeloConfig.plist in Resources */,
 				207278F919CC29A100C40976 /* Main.storyboard in Resources */,
 				207278FE19CC29A100C40976 /* LaunchScreen.xib in Resources */,
 				20E4674D19D00ED4009EC7AF /* Podfile in Resources */,
+				8378EA5F2705DB7C00A363B3 /* RcConfigSource.json in Resources */,
 				58AC34A81DEC872F003D1911 /* DimeloTestApp-Info.plist in Resources */,
 				207278FB19CC29A100C40976 /* Images.xcassets in Resources */,
 			);
@@ -293,9 +309,12 @@
 				58AC34A71DEC872F003D1911 /* DimeloTelcoViewController.m in Sources */,
 				58AC34A61DEC872F003D1911 /* DimeloDefaultViewController.m in Sources */,
 				58AC34A91DEC872F003D1911 /* DimeloTestAppDelegate.m in Sources */,
+				8378EA612705DB7C00A363B3 /* RcSourceModel.m in Sources */,
 				207278F619CC29A100C40976 /* ViewController.m in Sources */,
 				207278F319CC29A100C40976 /* AppDelegate.m in Sources */,
 				58AC34A41DEC872F003D1911 /* DimeloBankViewController.m in Sources */,
+				8378EA602705DB7C00A363B3 /* RcSourceTableViewCell.m in Sources */,
+				8378EA5E2705DB7C00A363B3 /* RCConfigurationViewController.m in Sources */,
 				207278F019CC29A100C40976 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
