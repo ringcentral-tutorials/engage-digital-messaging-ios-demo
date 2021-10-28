@@ -43,6 +43,17 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 
     self.tabBarController.delegate = self;
 
+    if (@available(iOS 13.0, *)) {
+        UITabBarAppearance* tabBarAppearance = [self.tabBarController.tabBar.standardAppearance copy];
+        [tabBarAppearance configureWithOpaqueBackground];
+        tabBarAppearance.backgroundColor = [UIColor colorWithRed:255/247 green:255/247 blue:255/247 alpha:1.0];
+        self.tabBarController.tabBar.standardAppearance = tabBarAppearance;
+
+        if (@available(iOS 15.0, *)) {
+            self.tabBarController.tabBar.scrollEdgeAppearance = tabBarAppearance;
+        }
+    }
+
     Dimelo* dimelo;
 
     if (selectedSource.hostname && selectedSource.hostname.length > 0) {
@@ -51,8 +62,9 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
         dimelo = [[Dimelo sharedInstance] initWithApiSecret:selectedSource.apiSecret domainName:selectedSource.domainName delegate:self];
     }
 
-    #warning Switch this off when using a distribution provisioning profil
-    dimelo.developmentAPNS = YES;
+    #ifdef DEBUG
+        dimelo.developmentAPNS = YES;
+    #endif
 
     // When any of these properties are set, JWT is recomputed instantly.
     if ([[[NSProcessInfo processInfo] arguments] containsObject: @"isUITest"]) {
@@ -461,12 +473,15 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
     NSMutableArray *viewControllers = [[NSMutableArray alloc] initWithArray:tabBarController.viewControllers];
 
+    Dimelo.sharedInstance.embeddedAsFragment = tabBarController.selectedIndex == 2;
+
     if (tabBarController.selectedIndex == 2) {
         UINavigationController *dimeloTelcoNavigationController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"dimeloTelcoNavigationController"];
         [viewControllers replaceObjectAtIndex:2 withObject:dimeloTelcoNavigationController];
         tabBarController.viewControllers = viewControllers;
     } else if (tabBarController.selectedIndex == 3) {
         Dimelo.sharedInstance.userIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"];
+        Dimelo.sharedInstance.embeddedAsFragment = NO;
         self.tabChatVC = [Dimelo.sharedInstance chatViewController];
         self.tabChatVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Support", @"Test App") image:[UIImage imageNamed: @"Support"] selectedImage:[UIImage imageNamed:@"SupportSelected"]];
         [viewControllers replaceObjectAtIndex:3 withObject:self.tabChatVC];
