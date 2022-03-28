@@ -19,6 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="572"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SDK version: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="S03-2z-EId">
+                                <rect key="frame" x="187.5" y="10" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZs-UD-G0E">
                                 <rect key="frame" x="0.0" y="30" width="375" height="493"/>
                                 <subviews>
@@ -100,7 +106,6 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eh-5x-qWd">
                                                 <rect key="frame" x="110.5" y="250" width="154" height="33"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="simulate_push"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Update configuration">
                                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -147,9 +152,11 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="S03-2z-EId" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="4Z9-aG-zZN"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="YZs-UD-G0E" secondAttribute="bottom" id="789-5t-UKy"/>
                             <constraint firstItem="YZs-UD-G0E" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="8Xi-Eo-1ln"/>
                             <constraint firstItem="YZs-UD-G0E" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="AcC-Jy-PCb"/>
+                            <constraint firstItem="S03-2z-EId" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="C2o-Qc-BKf"/>
                             <constraint firstAttribute="trailing" secondItem="YZs-UD-G0E" secondAttribute="trailing" id="Hbl-pg-YZT"/>
                             <constraint firstItem="YZs-UD-G0E" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="rkb-9c-65g"/>
                         </constraints>
@@ -158,6 +165,7 @@ Tap the button below to open a modal chat. Select another tab to open a chat in 
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="572"/>
                     <connections>
+                        <outlet property="sdkVersionLabel" destination="S03-2z-EId" id="2BF-H2-r7s"/>
                         <outlet property="unreadCountLabel" destination="K8B-Cd-Tca" id="Gtq-A6-wTT"/>
                     </connections>
                 </viewController>

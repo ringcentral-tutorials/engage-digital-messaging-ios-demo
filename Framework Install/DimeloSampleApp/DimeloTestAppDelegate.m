@@ -67,19 +67,23 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     #endif
 
     // When any of these properties are set, JWT is recomputed instantly.
-    if ([[[NSProcessInfo processInfo] arguments] containsObject: @"isUITest"]) {
-        dimelo.userIdentifier = @"test-1000555777";
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DimeloConfig" ofType:@"plist"];
-        NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile: filePath];
-        NSString *apiSecret = [dict objectForKey:@"apiSecret"];
-        if (apiSecret && apiSecret.length > 0) {
-            [dimelo initializeWithApiSecretAndHostName: apiSecret hostName: @"domain-test.messaging.dimelo.info" delegate: nil];
+    if ([NSProcessInfo.processInfo.arguments containsObject:@"isUITest"]) {
+        [UIApplication sharedApplication].keyWindow.layer.speed = 200;
+        [dimelo initializeWithApiSecretAndHostName:[NSProcessInfo.processInfo.environment objectForKey:@"rcTestApiSecret"] hostName:[NSProcessInfo.processInfo.environment objectForKey:@"rcTestHostName"] delegate:nil];
+        dimelo.userIdentifier = [NSProcessInfo.processInfo.environment objectForKey:@"rcTestUserIdentifier"];
+        dimelo.enableThreads = [NSProcessInfo.processInfo.environment objectForKey:@"rcTestEnableThreads"].boolValue;
+
+        if ([NSProcessInfo.processInfo.environment objectForKey:@"rcDisableAllAttachments"].boolValue) {
+            [Dimelo disableAttachments];
         }
-    } else if ([[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"]) {
-        dimelo.userIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"];
+    } else {
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"]) {
+            dimelo.userIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"];
+        }
+
+        dimelo.enableThreads = [[NSUserDefaults standardUserDefaults] boolForKey:@"rc_enable_threads"];
     }
 
-    dimelo.enableThreads = [[NSUserDefaults standardUserDefaults] boolForKey:@"rc_enable_threads"];
     dimelo.authenticationInfo = @{@"bankBranch": @"Test-1234"};
     dimelo.messageContextInfo = @{@"extra": @"1234"};
 

@@ -10,6 +10,7 @@
 
 @interface DimeloDefaultViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UILabel* unreadCountLabel;
+@property (strong, nonatomic) IBOutlet UILabel *unreadCountLabel;
+@property (strong, nonatomic) IBOutlet UILabel *sdkVersionLabel;
 
 @end

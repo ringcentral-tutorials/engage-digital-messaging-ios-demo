@@ -45,8 +45,7 @@
     [super viewDidLoad];
     
     self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Start" image:[UIImage imageNamed:@"MainMenu"] selectedImage:[UIImage imageNamed:@"MainMenuSelected"]];
-    
-	// Do any additional setup after loading the view, typically from a nib.
+    self.sdkVersionLabel.text = [self.sdkVersionLabel.text stringByAppendingString:Dimelo.sharedInstance.sdkVersion];
 }
 
 - (void) didUpdateUnreadCount:(NSNotification*)notif
