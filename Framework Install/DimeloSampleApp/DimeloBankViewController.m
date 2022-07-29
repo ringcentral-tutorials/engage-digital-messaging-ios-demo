@@ -80,7 +80,40 @@
         _dimelo.systemMessageTextColor = [UIColor colorWithWhite:1.0 alpha:0.97f];
 
         _dimelo.loadMoreMessagesButtonTextColor = [UIColor whiteColor];
-        _dimelo.dateTextColor = [UIColor colorWithWhite:1.0 alpha:0.7f];
+        _dimelo.dateTextColor = UIColor.redColor;
+        _dimelo.dateFont = [UIFont boldSystemFontOfSize:18.0];
+        _dimelo.quickRepliesPaddingInsets = UIEdgeInsetsMake(20, 20, 20, 20);
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setLocalizedDateFormatFromTemplate:@"yyyy-MM-dd"];
+        _dimelo.dateFormatter = dateFormatter;
+        _dimelo.messageFont = [UIFont boldSystemFontOfSize:20.0];
+        _dimelo.agentTemplateBorderColor = UIColor.redColor;
+        _dimelo.agentTemplateWithImageBodyBackgroundColor = UIColor.lightGrayColor;
+        _dimelo.quickRepliesBorderWidth = 3.0;
+        _dimelo.quickRepliesTextColor = UIColor.whiteColor;
+        _dimelo.quickRepliesTappedTextColor = UIColor.redColor;
+        _dimelo.quickRepliesBorderColor = UIColor.redColor;
+        _dimelo.badgeFont = [UIFont boldSystemFontOfSize:17.0];
+        _dimelo.badgeTextColor = UIColor.redColor;
+        _dimelo.backToAllChatsFont = [UIFont boldSystemFontOfSize:17.0];
+        _dimelo.threadsListSeparatorColor = UIColor.blackColor;
+        _dimelo.backToAllChatsItemImage = [UIImage imageNamed:@"Bank"];
+        _dimelo.lockedThreadImage = [UIImage imageNamed:@"Bank"];
+        _dimelo.quickRepliesHorizontalSpacing = 8.0;
+        _dimelo.hourTimeFont = [UIFont boldSystemFontOfSize:17.0];
+        _dimelo.agentTimeFont = [UIFont boldSystemFontOfSize:17.0];
+        _dimelo.agentTimeColor = UIColor.greenColor;
+        _dimelo.hourTimeTextColor = UIColor.greenColor;
+        _dimelo.agentNameColor = UIColor.redColor;
+        _dimelo.agentStructuredMessageItemFont = [UIFont boldSystemFontOfSize:18.0];
+        _dimelo.agentStructuredMessageUrlFont = [UIFont boldSystemFontOfSize:15.0];
+        _dimelo.agentStructuredMessageSubTitleFont = [UIFont boldSystemFontOfSize:13.0];
+        _dimelo.agentStructuredMessageTitleFont = [UIFont boldSystemFontOfSize:18.0];
+        _dimelo.agentStructuredMessageTitleColor = UIColor.blueColor;
+        _dimelo.agentStructuredMessageSubtitleColor = UIColor.redColor;
+        _dimelo.agentStructuredMessageUrlColor = UIColor.brownColor;
+        _dimelo.agentStructuredMessageItemColor = UIColor.brownColor;
+        _dimelo.agentStructuredMessageItemTappedColor = UIColor.blueColor;
     }
 
     _dimelo.userIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey: @"rc_user_id"];
