@@ -20,6 +20,17 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>app</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -29,6 +40,8 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>To Send location to a support team.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
+	<string>To Send location to a support team.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>To Send location to a support team.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>To send a picture to a support team.</string>

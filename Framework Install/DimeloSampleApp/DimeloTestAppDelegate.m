@@ -68,6 +68,11 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 
     // When any of these properties are set, JWT is recomputed instantly.
     if ([NSProcessInfo.processInfo.arguments containsObject:@"isUITest"]) {
+        if ([NSProcessInfo.processInfo.environment objectForKey:@"rcDefaultLanguage"].boolValue) {
+            [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObject:@"fr"] forKey:@"AppleLanguages"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+
         [UIApplication sharedApplication].keyWindow.layer.speed = 200;
         [dimelo initializeWithApiSecretAndHostName:[NSProcessInfo.processInfo.environment objectForKey:@"rcTestApiSecret"] hostName:[NSProcessInfo.processInfo.environment objectForKey:@"rcTestHostName"] delegate:nil];
         dimelo.userIdentifier = [NSProcessInfo.processInfo.environment objectForKey:@"rcTestUserIdentifier"];
@@ -497,5 +502,15 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     NSString* path = [[NSBundle mainBundle] pathForResource:@"RcConfigSource" ofType:@"json"];
     NSData* data = [NSData dataWithContentsOfFile:path];
     return [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+}
+
+// Deeplink test
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if ([url.scheme isEqualToString:@"app"] && [url.host isEqualToString:@"go-to-bank-tab"]) {
+        [self.tabBarController dismissViewControllerAnimated:NO completion:nil];
+        [self.tabBarController setSelectedIndex:1];
+    }
+
+    return YES;
 }
 @end
