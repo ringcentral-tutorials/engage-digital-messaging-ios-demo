@@ -77,6 +77,8 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
         [dimelo initializeWithApiSecretAndHostName:[NSProcessInfo.processInfo.environment objectForKey:@"rcTestApiSecret"] hostName:[NSProcessInfo.processInfo.environment objectForKey:@"rcTestHostName"] delegate:nil];
         dimelo.userIdentifier = [NSProcessInfo.processInfo.environment objectForKey:@"rcTestUserIdentifier"];
         dimelo.enableThreads = [NSProcessInfo.processInfo.environment objectForKey:@"rcTestEnableThreads"].boolValue;
+        [[NSUserDefaults standardUserDefaults] setBool:[NSProcessInfo.processInfo.environment objectForKey:@"rcTestEnableThreads"].boolValue forKey:@"rc_enable_threads"];
+        dimelo.embeddedAsFragment = [NSProcessInfo.processInfo.environment objectForKey:@"rcTestEmbeddedAsFragment"].boolValue;
 
         if ([NSProcessInfo.processInfo.environment objectForKey:@"rcDisableAllAttachments"].boolValue) {
             [Dimelo disableAttachments];
