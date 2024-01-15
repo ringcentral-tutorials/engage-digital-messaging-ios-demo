@@ -93,6 +93,7 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
 
     dimelo.authenticationInfo = @{@"bankBranch": @"Test-1234"};
     dimelo.messageContextInfo = @{@"extra": @"1234"};
+    dimelo.showScrollToBottomButton = YES;
 
     //! Initialize dimelo Chat ViewController
     self.tabChatVC = [dimelo chatViewController];
