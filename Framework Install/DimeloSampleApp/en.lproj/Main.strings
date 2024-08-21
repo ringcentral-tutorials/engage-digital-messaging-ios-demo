@@ -1,0 +1,90 @@
+
+/* Class = "UIButton"; normalTitle = "Simulate Longer Notification"; ObjectID = "1vZ-BT-hns"; */
+"1vZ-BT-hns.normalTitle" = "Simulate Longer Notification";
+
+/* Class = "UIButton"; normalTitle = "BTC Exchange"; ObjectID = "3b9-4D-3rK"; */
+"3b9-4D-3rK.normalTitle" = "BTC Exchange";
+
+/* Class = "UIButton"; normalTitle = "Update configuration"; ObjectID = "7eh-5x-qWd"; */
+"7eh-5x-qWd.normalTitle" = "Update configuration";
+
+/* Class = "UIButton"; normalTitle = "UPDATE"; ObjectID = "7n0-RY-QZl"; */
+"7n0-RY-QZl.normalTitle" = "UPDATE";
+
+/* Class = "UIButton"; normalTitle = "Open Popover"; ObjectID = "8hj-0M-gNk"; */
+"8hj-0M-gNk.normalTitle" = "Open Popover";
+
+/* Class = "UILabel"; text = "Local Bank"; ObjectID = "9px-4B-y20"; */
+"9px-4B-y20.text" = "Local Bank";
+
+/* Class = "UIButton"; normalTitle = "Open Full Screen"; ObjectID = "CIJ-qp-bpZ"; */
+"CIJ-qp-bpZ.normalTitle" = "Open Full Screen";
+
+/* Class = "UIButton"; accessibilityLabel = "live_support"; ObjectID = "DcV-iH-sI4"; */
+"DcV-iH-sI4.accessibilityLabel" = "live_support";
+
+/* Class = "UIButton"; normalTitle = "Live Support"; ObjectID = "DcV-iH-sI4"; */
+"DcV-iH-sI4.normalTitle" = "Live Support";
+
+/* Class = "UILabel"; text = "Here you can test chat UI in different contexts: modal and tabbar.\n\nTap the button below to open a modal chat. Select another tab to open a chat in the tab view."; ObjectID = "FOp-2e-X0f"; */
+"FOp-2e-X0f.text" = "Here you can test chat UI in different contexts: modal and tabbar.\n\nTap the button below to open a modal chat. Select another tab to open a chat in the tab view.";
+
+/* Class = "UIButton"; normalTitle = "Funds Transfer"; ObjectID = "IGM-gg-xai"; */
+"IGM-gg-xai.normalTitle" = "Funds Transfer";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "K8B-Cd-Tca"; */
+"K8B-Cd-Tca.text" = "3";
+
+/* Class = "UILabel"; text = "Enable threads:"; ObjectID = "Kmz-WV-Kdv"; */
+"Kmz-WV-Kdv.text" = "Enable threads:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MDZ-Pa-Muq"; */
+"MDZ-Pa-Muq.text" = "Label";
+
+/* Class = "UILabel"; text = "MyTelecom"; ObjectID = "P6c-UG-q9L"; */
+"P6c-UG-q9L.text" = "MyTelecom";
+
+/* Class = "UILabel"; text = "SDK version: "; ObjectID = "S03-2z-EId"; */
+"S03-2z-EId.text" = "SDK version: ";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "Twe-d4-SXP"; */
+"Twe-d4-SXP.title" = "Item";
+
+/* Class = "UILabel"; text = "Welcome to your new banking application. Consult your accounts, make transfers and play on the stock market with just a tap."; ObjectID = "VeR-H0-Qwh"; */
+"VeR-H0-Qwh.text" = "Welcome to your new banking application. Consult your accounts, make transfers and play on the stock market with just a tap.";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "Vo6-IF-BoD"; */
+"Vo6-IF-BoD.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Simulate Short Notification"; ObjectID = "Yi3-hi-Yoy"; */
+"Yi3-hi-Yoy.normalTitle" = "Simulate Short Notification";
+
+/* Class = "UIButton"; normalTitle = "Open Chat"; ObjectID = "a4b-W3-nHd"; */
+"a4b-W3-nHd.normalTitle" = "Open Chat";
+
+/* Class = "UILabel"; text = "Choose your source:"; ObjectID = "cQo-zU-CjK"; */
+"cQo-zU-CjK.text" = "Choose your source:";
+
+/* Class = "UIButton"; normalTitle = "My Accounts"; ObjectID = "krp-3I-trW"; */
+"krp-3I-trW.normalTitle" = "My Accounts";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "lam-xb-7ti"; */
+"lam-xb-7ti.normalTitle" = "OK";
+
+/* Class = "UILabel"; text = "Welcome to Dimelo Test App"; ObjectID = "lbb-Fa-BVE"; */
+"lbb-Fa-BVE.text" = "Welcome to Dimelo Test App";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qXZ-Zw-QOG"; */
+"qXZ-Zw-QOG.text" = "Label";
+
+/* Class = "UINavigationController"; title = "Telecom"; ObjectID = "tUH-6k-zZI"; */
+"tUH-6k-zZI.title" = "Telecom";
+
+"user_identifier" = "User Identifier";
+"username" = "Username";
+"company" = "Company";
+"email" = "Email";
+"firstname" = "Firstname";
+"lastname" = "Lastname";
+"home_phone" = "Home Phone";
+"mobile_phone" = "Mobile Phone";

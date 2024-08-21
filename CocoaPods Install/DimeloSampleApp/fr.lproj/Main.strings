@@ -67,9 +67,17 @@
 
 /* Class = "UILabel"; text = "Thank you for updating to our new app. Here you can upgrade your plan and subscribe to our additional services."; ObjectID = "mxE-0B-meP"; */
 "mxE-0B-meP.text" = "Nous vous remercions de votre mise à jour pour notre nouvelle application. Ici, vous pouvez mettre à niveau votre plan et vous inscrire à nos services supplémentaires.";
-"0ve-jG-lCM.text" = "Choisissez un identifiant:";
 "7eh-5x-qWd.normalTitle" = "Modifier la configuration";
 "7n0-RY-QZl.normalTitle" = "MODIFIER";
 "Kmz-WV-Kdv.text" = "Activer les fils de discussion :";
 "cQo-zU-CjK.text" = "Choisissez une source :";
 "S03-2z-EId.text" = "Version du SDK : ";
+
+"user_identifier" = "Identifiant de l'utilisateur";
+"username" = "Nom d'utilisateur";
+"company" = "Société";
+"email" = "E-mail";
+"firstname" = "Prénom";
+"lastname" = "Nom";
+"home_phone" = "Tel fixe";
+"mobile_phone" = "Tel mobile";

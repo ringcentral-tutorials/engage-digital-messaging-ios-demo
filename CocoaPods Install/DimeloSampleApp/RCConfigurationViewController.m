@@ -26,19 +26,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.userIdEditText.delegate = self;
-
-    self.userIdEditText.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"User id" attributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]}];
-
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     NSData* storedEncodedObject = [defaults objectForKey:@"rc_selected_source"];
     selectedSource = [NSKeyedUnarchiver unarchiveObjectWithData:storedEncodedObject];
 
-    self.userIdEditText.layer.cornerRadius = 3.0f;
-    self.userIdEditText.layer.masksToBounds = YES;
-    self.userIdEditText.layer.borderColor = [[UIColor blackColor]CGColor];
-    self.userIdEditText.layer.borderWidth = 0.5f;
-    self.userIdEditText.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"];
+    [self configureTextField:self.userIdEditText placeHolder:NSLocalizedStringFromTable(@"user_identifier", @"Main", @"") key:@"rc_user_id"];
+    [self configureTextField:self.usernameEditText placeHolder:NSLocalizedStringFromTable(@"username", @"Main", @"") key:@"rc_username"];
+    [self configureTextField:self.companyEditText placeHolder:NSLocalizedStringFromTable(@"company", @"Main", @"") key:@"rc_company"];
+    [self configureTextField:self.emailEditText placeHolder:NSLocalizedStringFromTable(@"email", @"Main", @"") key:@"rc_email"];
+    [self configureTextField:self.firstnameEditText placeHolder:NSLocalizedStringFromTable(@"firstname", @"Main", @"") key:@"rc_firstname"];
+    [self configureTextField:self.lastnameEditText placeHolder:NSLocalizedStringFromTable(@"lastname", @"Main", @"") key:@"rc_lastname"];
+    [self configureTextField:self.homePhoneEditText placeHolder:NSLocalizedStringFromTable(@"home_phone", @"Main", @"") key:@"rc_home_phone"];
+    [self configureTextField:self.mobilePhoneEditText placeHolder:NSLocalizedStringFromTable(@"mobile_phone", @"Main", @"") key:@"rc_mobile_phone"];
+
+    [self configureLabel:self.userIdLabel placeHolder:NSLocalizedStringFromTable(@"user_identifier", @"Main", @"")];
+    [self configureLabel:self.usernameLabel placeHolder:NSLocalizedStringFromTable(@"username", @"Main", @"")];
+    [self configureLabel:self.companyLabel placeHolder:NSLocalizedStringFromTable(@"company", @"Main", @"")];
+    [self configureLabel:self.emailLabel placeHolder:NSLocalizedStringFromTable(@"email", @"Main", @"")];
+    [self configureLabel:self.firstnameLabel placeHolder:NSLocalizedStringFromTable(@"firstname", @"Main", @"")];
+    [self configureLabel:self.lastnameLabel placeHolder:NSLocalizedStringFromTable(@"lastname", @"Main", @"")];
+    [self configureLabel:self.homePhoneLabel placeHolder:NSLocalizedStringFromTable(@"home_phone", @"Main", @"")];
+    [self configureLabel:self.mobilePhoneLabel placeHolder:NSLocalizedStringFromTable(@"mobile_phone", @"Main", @"")];
+
     self.enableThreadsSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"rc_enable_threads"];
 
     NSArray* jsonDict = [DimeloTestAppDelegate JSONFromFile];
@@ -63,16 +72,44 @@
     [self tableView:self.tableViewSources didSelectRowAtIndexPath:indexPath];
 }
 
-- (IBAction)startAction:(id)sender {
-    NSString* userId = [self.userIdEditText.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+- (void)configureTextField:(UITextField *)textField placeHolder:(NSString *)placeHolder key:(NSString *)key {
+    textField.delegate = self;
+    textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:placeHolder attributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]}];
 
-    if (userId.length > 0) {
-        [[NSUserDefaults standardUserDefaults] setObject:userId forKey:@"rc_user_id"];
-        Dimelo.sharedInstance.userIdentifier = userId;
+    textField.layer.cornerRadius = 3.0f;
+    textField.layer.masksToBounds = YES;
+    textField.layer.borderColor = [[UIColor blackColor]CGColor];
+    textField.layer.borderWidth = 0.5f;
+    textField.text = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+}
+
+- (void)configureLabel:(UILabel *)label placeHolder:(NSString *)placeHolder {
+    label.text = placeHolder;
+}
+
+- (void)configureFieldsIdentity:(UITextField *)textField key:(NSString *)key fieldIdentity:(NSString *)fieldIdentity {
+    NSString *text = [textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+
+    fieldIdentity = text;
+
+    if (text.length > 0) {
+        [[NSUserDefaults standardUserDefaults] setObject:text forKey:key];
+        fieldIdentity = text;
     } else {
-        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"rc_user_id"];
-        Dimelo.sharedInstance.userIdentifier = nil;
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:key];
+        fieldIdentity = nil;
     }
+}
+
+- (IBAction)startAction:(id)sender {
+    [self configureFieldsIdentity:self.userIdEditText key:@"rc_user_id" fieldIdentity:Dimelo.sharedInstance.userIdentifier];
+    [self configureFieldsIdentity:self.usernameEditText key:@"rc_username" fieldIdentity:Dimelo.sharedInstance.userName];
+    [self configureFieldsIdentity:self.companyEditText key:@"rc_company" fieldIdentity:Dimelo.sharedInstance.company];
+    [self configureFieldsIdentity:self.emailEditText key:@"rc_email" fieldIdentity:Dimelo.sharedInstance.email];
+    [self configureFieldsIdentity:self.firstnameEditText key:@"rc_firstname" fieldIdentity:Dimelo.sharedInstance.firstname];
+    [self configureFieldsIdentity:self.lastnameEditText key:@"rc_lastname" fieldIdentity:Dimelo.sharedInstance.lastname];
+    [self configureFieldsIdentity:self.homePhoneEditText key:@"rc_home_phone" fieldIdentity:Dimelo.sharedInstance.homePhone];
+    [self configureFieldsIdentity:self.mobilePhoneEditText key:@"rc_mobile_phone" fieldIdentity:Dimelo.sharedInstance.mobilePhone];
 
     Dimelo.sharedInstance.enableThreads = [self.enableThreadsSwitch isOn];
     [[NSUserDefaults standardUserDefaults] setBool:[self.enableThreadsSwitch isOn] forKey:@"rc_enable_threads"];

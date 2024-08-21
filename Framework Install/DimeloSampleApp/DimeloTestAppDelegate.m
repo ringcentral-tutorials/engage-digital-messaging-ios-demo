@@ -73,6 +73,10 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
             [[NSUserDefaults standardUserDefaults] synchronize];
         }
 
+        if ([NSProcessInfo.processInfo.environment objectForKey:@"rcSDKLocale"]) {
+            dimelo.defaultLocale = [[NSLocale alloc] initWithLocaleIdentifier:[NSProcessInfo.processInfo.environment objectForKey:@"rcSDKLocale"]];
+        }
+
         [UIApplication sharedApplication].keyWindow.layer.speed = 200;
         [dimelo initializeWithApiSecretAndHostName:[NSProcessInfo.processInfo.environment objectForKey:@"rcTestApiSecret"] hostName:[NSProcessInfo.processInfo.environment objectForKey:@"rcTestHostName"] delegate:nil];
         dimelo.userIdentifier = [NSProcessInfo.processInfo.environment objectForKey:@"rcTestUserIdentifier"];
@@ -86,6 +90,34 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
     } else {
         if ([[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"]) {
             dimelo.userIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"];
+        }
+
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"rc_username"]) {
+            dimelo.userName = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_username"];
+        }
+
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"rc_company"]) {
+            dimelo.company = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_company"];
+        }
+
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"rc_firstname"]) {
+            dimelo.firstname = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_firstname"];
+        }
+
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"rc_lastname"]) {
+            dimelo.lastname = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_lastname"];
+        }
+
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"rc_home_phone"]) {
+            dimelo.homePhone = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_home_phone"];
+        }
+
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"rc_mobile_phone"]) {
+            dimelo.mobilePhone = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_mobile_phone"];
+        }
+
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"rc_email"]) {
+            dimelo.email = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_email"];
         }
 
         dimelo.enableThreads = [[NSUserDefaults standardUserDefaults] boolForKey:@"rc_enable_threads"];
