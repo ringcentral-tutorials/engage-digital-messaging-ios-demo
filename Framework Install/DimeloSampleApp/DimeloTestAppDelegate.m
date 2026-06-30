@@ -10,6 +10,7 @@
 #import "Dimelo/Dimelo.h"
 #import "DimeloTelcoViewController.h"
 #import "RcSourceModel.h"
+#import "RcMock.h"
 
 @interface DimeloTestAppDelegate () <DimeloDelegate, UIPopoverControllerDelegate, UITabBarControllerDelegate>
 @property(nonatomic, readonly) UITabBarController *tabBarController;
@@ -78,7 +79,10 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
         }
 
         [UIApplication sharedApplication].keyWindow.layer.speed = 200;
-        [dimelo initializeWithApiSecretAndHostName:[NSProcessInfo.processInfo.environment objectForKey:@"rcTestApiSecret"] hostName:[NSProcessInfo.processInfo.environment objectForKey:@"rcTestHostName"] delegate:nil];
+
+        [RcMock initializeMock:[Dimelo class]];
+
+        [dimelo initializeWithApiKey:[NSProcessInfo.processInfo.environment objectForKey:@"rcTestApiSecret"] domainName:[NSProcessInfo.processInfo.environment objectForKey:@"rcTestDomainName"] delegate:nil];
         dimelo.userIdentifier = [NSProcessInfo.processInfo.environment objectForKey:@"rcTestUserIdentifier"];
         dimelo.enableThreads = [NSProcessInfo.processInfo.environment objectForKey:@"rcTestEnableThreads"].boolValue;
         [[NSUserDefaults standardUserDefaults] setBool:[NSProcessInfo.processInfo.environment objectForKey:@"rcTestEnableThreads"].boolValue forKey:@"rc_enable_threads"];
@@ -87,6 +91,8 @@ NSTimeInterval defaultUnreadFetchInterval = 5;
         if ([NSProcessInfo.processInfo.environment objectForKey:@"rcDisableAllAttachments"].boolValue) {
             [Dimelo disableAttachments];
         }
+
+        [RcMock mockFields:dimelo];
     } else {
         if ([[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"]) {
             dimelo.userIdentifier = [[NSUserDefaults standardUserDefaults] objectForKey:@"rc_user_id"];
